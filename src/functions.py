@@ -20,6 +20,8 @@ import numpy as np
 import scipy.sparse as sp
 from pydantic import BaseModel
 from typing import Any
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 
 
 
@@ -207,25 +209,86 @@ def load_network_data(inp_file):
 Plot network function
 """ 
 
-def plot_network(wdn):
+def plot_network(wdn, plot_type='layout', vals=None, t=None):
 
     ## unload data
     link_df = wdn.link_df
     node_df = wdn.node_df
     net_info = wdn.net_info
+    h0_df = wdn.h0_df
+    
+    ## draw network
+    if plot_type == 'layout':
+        uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
+        pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
 
-    uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
-    pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
-    reservoir_labels = {node: 'Reservoir' for node in net_info['reservoir_names']}
-            
-    ## draw entire network
-    nx.draw(uG, pos, node_size=30, node_shape='o', node_color='skyblue')
+        nx.draw(uG, pos, node_size=30, node_shape='o', node_color='black')
+        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=75, node_shape='s', node_color='black') # draw reservoir nodes
 
-    ## draw reservoir nodes
+    elif plot_type == 'head':
 
-    nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=75, node_shape='s', node_color='black')
+        uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
+        pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
+        
+        # create dictionary from dataframe to match node IDs
+        vals_df = vals.set_index('node_ID')[f'h_{t}']
+        h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
+
+        junction_vals = [vals_df[node] for node in net_info['junction_names']]
+        reservoir_vals = [h0_df[node] for node in net_info['reservoir_names']]
+        node_vals_all = junction_vals + reservoir_vals
+
+        # color scaling
+        min_val = min(node_vals_all)
+        max_val = max(node_vals_all)
+
+        # plot hydraulic heads
+        cmap = cm.get_cmap('RdYlGn')
+        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=30, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
+        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=75, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
+
+        # create a color bar
+        sm = plt.cm.ScalarMappable(cmap=cmap)
+        sm.set_array(node_vals_all)
+        colorbar = plt.colorbar(sm)
+        colorbar.set_label('Hydraulic head [m]', fontsize=12)
+
+
+    elif plot_type == 'flow':
+
+        edge_df = link_df[['link_ID', 'node_out', 'node_in']]
+        edge_df.set_index('link_ID', inplace=True)
+        vals_df = vals.set_index('link_ID')[f'q_{t}']
+        vals_df = abs(vals_df) * 1000
+        edge_df = edge_df.join(vals_df)
+
+        uG = nx.from_pandas_edgelist(edge_df, source='node_out', target='node_in', edge_attr=f'q_{t}')
+        pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
+
+        # Define colormap
+        cmap = cm.get_cmap('Blues')
+
+        edge_values = nx.get_edge_attributes(uG, f'q_{t}')
+        edge_values = list(edge_values.values())
+
+        # color scaling
+        norm = plt.Normalize(min(edge_values), max(edge_values))
+        edge_colors = cmap(norm(edge_values))
+
+
+        nx.draw(uG, pos, node_size=30, node_shape='o', node_color='black')
+        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=75, node_shape='s', node_color='black') 
+        nx.draw_networkx_edges(uG, pos, edge_color=edge_colors) 
+
+        # create a color bar
+        sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+        sm.set_array(edge_values)
+        colorbar = plt.colorbar(sm)
+        colorbar.set_label('Flow [L/s]', fontsize=12)       
+
     
     ## reservoir labels
+    reservoir_labels = {node: 'Reservoir' for node in net_info['reservoir_names']}
     labels = nx.draw_networkx_labels(uG, pos, reservoir_labels, font_size=12, verticalalignment='bottom')
     for _, label in labels.items():
         label.set_y(label.get_position()[1] + 80)
@@ -510,7 +573,7 @@ def nr_schur_solver(wdn):
 
     column_names_h = [f'h_{t+1}' for t in range(net_info['nt'])]
     h_df = pd.DataFrame(h, columns=column_names_h)
-    h_df.insert(0, 'link_ID', node_df['node_ID'])
+    h_df.insert(0, 'node_ID', node_df['node_ID'])
 
 
     return q_df, h_df
