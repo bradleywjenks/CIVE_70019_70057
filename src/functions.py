@@ -18,6 +18,7 @@ import networkx as nx
 import pandas as pd
 import numpy as np
 import scipy.sparse as sp
+from sksparse.cholmod import cholesky
 from pydantic import BaseModel
 from typing import Any
 import matplotlib.pyplot as plt
@@ -35,13 +36,12 @@ set_matplotlib_formats('svg')
 
 
 """
-Load network data via wntr
-""" 
+    create classes for storing data as objects
+"""
 
-# class NullData(BaseModel):
-#     Pr: any # cholesky derived
-#     L_A12: any# cholesky derived
-#     Z: any
+class NullData(BaseModel):
+    fac: Any
+    Z: Any
 
 class WDN(BaseModel):
     A12: Any
@@ -54,6 +54,96 @@ class WDN(BaseModel):
 
     class Config:
         arbitrary_types_allowed = True
+
+
+
+
+
+"""
+    misc. functions for hydraulic solver code
+"""
+
+### define head loss equations
+def friction_loss(net_info, df):
+    if net_info['headloss'] == 'H-W':
+        K = 10.67 * df['length'] * (df['C'] ** -df['n_exp']) * (df['diameter'] ** -4.8704)
+    else:
+        K = [] # insert DW formula here...
+    
+    return K
+
+def local_loss(df):
+    K = (8 / (np.pi ** 2 * 9.81)) * (df['diameter'] ** -4) * df['C']
+    
+    return K
+
+
+### make null space data
+def make_nullspace(A12):
+    n_p, n_n = np.shape(A12)
+
+    n_c = n_p - n_n
+
+    Pt, Rt, T = permute_cotree(A12)
+
+    T1 = sp.tril(T[:n_n, :n_n]).tocsc()
+    T2 = T[n_n:n_p, :n_n]
+    L21 = sp.csr_matrix(-T2.dot(sp.linalg.spsolve(T1, sp.eye(n_n, format='csc'))))
+
+    Z = Pt.T.dot(sp.hstack((L21, sp.eye(n_c))).T)
+    fac = cholesky(A12.T.dot(A12))
+
+    nulldata = NullData(fac=fac, Z=Z)
+
+    return nulldata
+
+
+
+
+
+### Build cotree from WDN graph
+def permute_cotree(A):
+    n, m = np.shape(A)
+    
+    Pt = sp.eye(n)
+    Rt = sp.eye(m)
+
+    for i in range(m):
+        K = A[i:n, i:m]
+        r = np.argmax(np.sum(np.abs(K), axis=1) == 1)
+        c = np.argmax(np.abs(K[r, :]) == 1)
+
+        if r != 0:
+            iP = np.arange(n)
+            jP = np.arange(n)
+            vP = np.ones(n)
+            jP[i] = i + r
+            jP[i+r] = i
+            P = sp.csr_matrix((vP, (iP, jP)), shape=(n, n))
+            Pt = P.dot(Pt)
+            A = P.dot(A)
+        
+        if c != 0:
+            iR = np.arange(m)
+            jR = np.arange(m)
+            vR = np.ones(m)
+            jR[i] = i + c
+            jR[i+c] = i
+            R = sp.csr_matrix((vR, (iR, jR)), shape=(m, m))
+            Rt = R.dot(Rt)
+            A = A.dot(R)
+
+    return Pt, Rt, A
+
+
+
+
+
+
+
+"""
+Load network data via wntr
+""" 
 
 
 def load_network_data(inp_file):
@@ -300,6 +390,10 @@ def plot_network(wdn, plot_type='layout', vals=None, t=None):
 
 
 
+
+
+
+
 """
     EPANET solver code
 """
@@ -340,26 +434,15 @@ def epanet_solver(inp_file):
 
 
 
+
+
+
+
 """
     Hydraulic solver code
 """
 
 def hydraulic_solver(wdn, method=None, print_status=False):
-
-    
-    ## define head loss equations
-    def friction_loss(net_info, df):
-        if net_info['headloss'] == 'H-W':
-            K = 10.67 * df['length'] * (df['C'] ** -df['n_exp']) * (df['diameter'] ** -4.8704)
-        else:
-            K = [] # insert DW formula here...
-        
-        return K
-
-    def local_loss(df):
-        K = (8 / (np.pi ** 2 * 9.81)) * (df['diameter'] ** -4) * df['C']
-        
-        return K
 
     ### Step 1: input network data and setup solver parameters
 
@@ -392,6 +475,16 @@ def hydraulic_solver(wdn, method=None, print_status=False):
     h = np.zeros((net_info['nn'], net_info['nt']))
 
 
+    # preallocate matrices
+    if method == 'null_space':
+        null_data = make_nullspace(A12)
+        Z = null_data.Z.tocsr()
+        A12_fac = null_data.fac
+        A12_T = A12.T
+        Z_T = Z.T
+        kappa = 1e7
+
+
     # run over all time steps
     for t in range(net_info['nt']):
         
@@ -403,6 +496,17 @@ def hydraulic_solver(wdn, method=None, print_status=False):
         dk = demand_df.iloc[:, t+1].to_numpy(); dk = dk.reshape(-1, 1)
         h0k = h0_df.iloc[:, t+1].to_numpy(); h0k = h0k.reshape(-1, 1)
 
+        # initalize A11 matrix
+        A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
+        A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
+        A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
+
+        if method == 'null_space':
+            F_diag = n_exp * A11_diag # for null space method
+            w = A12_fac(dk)
+            x = A12 @ w
+            x = x.reshape(-1, 1)
+
         # begin iterations
         for k in range(kmax):
 
@@ -410,10 +514,6 @@ def hydraulic_solver(wdn, method=None, print_status=False):
                 if method == 'nr':
 
                     ### Step 3: compute h^{k+1} and q^{k+1} for each iteration k
-                    A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
-                    A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
-                    A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
-
                     N = sp.diags(n_exp.T, [0]) # matrix N  
                     I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
 
@@ -426,13 +526,15 @@ def hydraulic_solver(wdn, method=None, print_status=False):
                     hk = x[net_info['np']:net_info['np'] + net_info['nn']];hk = hk.reshape(-1, 1)
 
 
-                elif method == 'nr_schur':
-
-                    ### Step 3: compute h^{k+1} and q^{k+1}
+                    # update A11 matrix
                     A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
                     A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
                     A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
-                    
+
+
+                elif method == 'nr_schur':
+
+                    ### Step 3: compute h^{k+1} and q^{k+1}
                     inv_A11_diag = 1 / A11_diag; # diagonal elements of the inverse of A11
                     inv_A11 = sp.diags(inv_A11_diag.T, [0]) # inverse of A11, allocated as a sparse, diagonal matrix
 
@@ -449,12 +551,40 @@ def hydraulic_solver(wdn, method=None, print_status=False):
                     # solve q^{k+1} by substitution
                     I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
                     qk = (I - inv_N) @ qk - DD @ ((A12 @ hk) + (A10 @ h0k))
+
+                    # update A11 matrix
+                    A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
+                    A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
+                    A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
                     
 
+                ### Null space solver reference: Abraham, E. and Stoianov, I. (2016), 'Abraham, Edo, and Ivan Stoianov. "Sparse null space algorithms for hydraulic analysis of large-scale water supply networks.' Journal of Hydraulic Engineering, vol. 142, no. 3. ###
                 elif method == 'null_space':
-                    # insert code here...
-                    q_df = []
-                    h_df = []
+                    
+                    ### Step 3: compute h^{k+1} and q^{k+1}
+                    sigma_max = np.max(F_diag)
+                    tk = np.maximum((sigma_max / kappa) - F_diag, 0)
+                    F_diag = F_diag + tk
+
+                    X = Z_T @ sp.diags(F_diag.reshape(-1)) @ Z
+                    b = Z_T @ ((F_diag - A11_diag) * qk - A10 * h0k - F_diag * x)
+                    v = sp.linalg.spsolve(X, b)
+                    v = v.reshape(-1,1)
+
+                    qk_new = x + Z @ v
+
+                    b = A12_T @ ((F_diag - A11_diag) * qk - A10 * h0k - F_diag * qk_new)
+                    hk_new = A12_fac(b)
+                    hk_new = hk_new.reshape(-1, 1)
+
+                    hk = hk_new
+                    qk = qk_new
+
+                    # update A11 matrix
+                    A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
+                    A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
+                    A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
+                    F_diag = n_exp * A11_diag
 
             except:
                 print('No solver method was inputted.')
