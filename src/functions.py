@@ -300,6 +300,42 @@ def plot_network(wdn, plot_type='layout', vals=None, t=None):
 
 
 
+"""
+    EPANET solver code
+"""
+
+def epanet_solver(inp_file):
+
+    ## load network from wntr
+    wn = wntr.network.WaterNetworkModel(inp_file)
+    sim = wntr.sim.EpanetSimulator(wn)
+    results = sim.run_sim()
+    
+    nt = int(wn.options.time.duration / wn.options.time.hydraulic_timestep)
+
+    ## get hydraulic head results
+    h_df = results.node['head'].T
+    col_names_h = [f'h_{t}' for t in range(1, len(h_df.columns)+1)]
+    h_df.columns = col_names_h
+    h_df.reset_index(drop=False, inplace=True)
+    h_df = h_df.rename(columns={'name': 'node_ID'})
+    if nt > 1:
+        h_df = h_df.iloc[:, :-1] # delete last time step
+
+    reservoir_names = wn.reservoir_name_list
+    h_df = h_df[~h_df['node_ID'].isin(reservoir_names)] # delete reservoir nodes
+
+    ## get flow results
+    q_df = results.link['flowrate'].T
+    col_names_q = [f'q_{t}' for t in range(1, len(q_df.columns)+1)]
+    q_df.columns = col_names_q
+    q_df.reset_index(drop=False, inplace=True)
+    q_df = q_df.rename(columns={'name': 'link_ID'})
+    if nt > 1:
+        q_df = q_df.iloc[:, :-1] # delete last time step
+
+
+    return q_df, h_df
 
 
 
@@ -308,10 +344,10 @@ def plot_network(wdn, plot_type='layout', vals=None, t=None):
     Hydraulic solver code
 """
 
-def hydraulic_solver(method='epanet', wdn=None, inp_file=None, print_status=False):
+def hydraulic_solver(wdn, method=None, print_status=False):
 
     
-    # define head loss equations
+    ## define head loss equations
     def friction_loss(net_info, df):
         if net_info['headloss'] == 'H-W':
             K = 10.67 * df['length'] * (df['C'] ** -df['n_exp']) * (df['diameter'] ** -4.8704)
@@ -325,226 +361,129 @@ def hydraulic_solver(method='epanet', wdn=None, inp_file=None, print_status=Fals
         
         return K
 
+    ### Step 1: input network data and setup solver parameters
+
+    # unload and compute network data
+    A12 = wdn.A12
+    A10 = wdn.A10
+    net_info = wdn.net_info
+    link_df = wdn.link_df
+    node_df = wdn.node_df
+    demand_df = wdn.demand_df
+    h0_df = wdn.h0_df
+
+    K = np.zeros((net_info['np'], 1))
+    for idx, row in link_df.iterrows():
+        if row['link_type'] == 'pipe':
+            K[idx] = friction_loss(net_info, row)
+
+        elif row['link_type'] == 'valve':
+            K[idx] = local_loss(row)
+            
+    n_exp = link_df['n_exp'].astype(float).to_numpy().reshape(-1, 1)
+
+    ## set stopping criteria
+    tol = 1e-5
+    kmax = 50 
+    tol_A11 = 1e-5 # small values in A11 make convergence unsteady; therefore, we need to define a lower bound -- see Todini (1988), page 7
+
+    # set solution arrays
+    q = np.zeros((net_info['np'], net_info['nt']))
+    h = np.zeros((net_info['nn'], net_info['nt']))
 
 
-    ### EPANET solver ###
-    if method == 'epanet':
-        ## load network from wntr
-        wn = wntr.network.WaterNetworkModel(inp_file)
-        sim = wntr.sim.EpanetSimulator(wn)
-        results = sim.run_sim()
+    # run over all time steps
+    for t in range(net_info['nt']):
         
-        nt = int(wn.options.time.duration / wn.options.time.hydraulic_timestep)
+        ### Step 2: set initial values
+        hk = 130 * np.ones((net_info['nn'], 1))
+        qk = 0.03 * np.ones((net_info['np'], 1))
 
-        ## get hydraulic head results
-        h_df = results.node['head'].T
-        col_names_h = [f'h_{t}' for t in range(1, len(h_df.columns)+1)]
-        h_df.columns = col_names_h
-        h_df.reset_index(drop=False, inplace=True)
-        h_df = h_df.rename(columns={'name': 'node_ID'})
-        if nt > 1:
-            h_df = h_df.iloc[:, :-1] # delete last time step
+        # set boundary head and demand conditions
+        dk = demand_df.iloc[:, t+1].to_numpy(); dk = dk.reshape(-1, 1)
+        h0k = h0_df.iloc[:, t+1].to_numpy(); h0k = h0k.reshape(-1, 1)
 
-        reservoir_names = wn.reservoir_name_list
-        h_df = h_df[~h_df['node_ID'].isin(reservoir_names)] # delete reservoir nodes
+        # begin iterations
+        for k in range(kmax):
 
-        ## get flow results
-        q_df = results.link['flowrate'].T
-        col_names_q = [f'q_{t}' for t in range(1, len(q_df.columns)+1)]
-        q_df.columns = col_names_q
-        q_df.reset_index(drop=False, inplace=True)
-        q_df = q_df.rename(columns={'name': 'link_ID'})
-        if nt > 1:
-            q_df = q_df.iloc[:, :-1] # delete last time step
+            try:
+                if method == 'nr':
 
+                    ### Step 3: compute h^{k+1} and q^{k+1} for each iteration k
+                    A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
+                    A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
+                    A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
 
+                    N = sp.diags(n_exp.T, [0]) # matrix N  
+                    I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
 
+                    b = np.concatenate([(N - I) @ A11 @ qk - A10 @ h0k, dk])
+                    J = sp.bmat([[N @ A11, A12], [A12.T, sp.csr_matrix((net_info['nn'], net_info['nn']))]], format='csr')
 
-    ### Newton-Raphson hydraulic solver ###
-    elif method == 'nr':
-        ### Step 1: unload network and hydraulic data
-        A12 = wdn.A12
-        A10 = wdn.A10
-        net_info = wdn.net_info
-        link_df = wdn.link_df
-        node_df = wdn.node_df
-        demand_df = wdn.demand_df
-        h0_df = wdn.h0_df
-
-        # compute loss coefficients
-        K = np.zeros((net_info['np'], 1))
-        for idx, row in link_df.iterrows():
-            if row['link_type'] == 'pipe':
-                K[idx] = friction_loss(net_info, row)
-
-            elif row['link_type'] == 'valve':
-                K[idx] = local_loss(row)
-                
-        n_exp = link_df['n_exp'].astype(float).to_numpy().reshape(-1, 1)
-            
-        # set stopping criteria
-        tol = 1e-5
-        kmax = 50 
-
-        # small values in A11 make convergence unsteady; therefore, we need to define a lower bound -- see Todini (1988), page 7
-        tol_A11 = 1e-5
-
-        # set solution arrays
-        q = np.zeros((net_info['np'], net_info['nt']))
-        h = np.zeros((net_info['nn'], net_info['nt']))
+                    # solve linear system
+                    x = sp.linalg.spsolve(J, b)
+                    qk = x[:net_info['np']]; qk = qk.reshape(-1, 1)
+                    hk = x[net_info['np']:net_info['np'] + net_info['nn']];hk = hk.reshape(-1, 1)
 
 
-        # run over all time steps
-        for t in range(net_info['nt']):
-            
-            ### Step 2: set initial values
-            hk = 130 * np.ones((net_info['nn'], 1))
-            qk = 0.03 * np.ones((net_info['np'], 1))
+                elif method == 'nr_schur':
 
-            # set boundary head and demand conditions
-            dk = demand_df.iloc[:, t+1].to_numpy(); dk = dk.reshape(-1, 1)
-            h0k = h0_df.iloc[:, t+1].to_numpy(); h0k = h0k.reshape(-1, 1)
-
-            # begin iterations
-            for k in range(kmax):
-
-                ### Step 3: compute h^{k+1} and q^{k+1} for each iteration k
-                A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
-                A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
-                A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
-
-                N = sp.diags(n_exp.T, [0]) # matrix N  
-                I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
-
-                b = np.concatenate([(N - I) @ A11 @ qk - A10 @ h0k, dk])
-                J = sp.bmat([[N @ A11, A12], [A12.T, sp.csr_matrix((net_info['nn'], net_info['nn']))]], format='csr')
-
-                # solve linear system
-                x = sp.linalg.spsolve(J, b)
-                qk = x[:net_info['np']]; qk = qk.reshape(-1, 1)
-                hk = x[net_info['np']:net_info['np'] + net_info['nn']];hk = hk.reshape(-1, 1)
-
-                
-                ### Step 4: convergence check 
-                err = A11 @ qk + A12 @ hk + A10 @ h0k
-                max_err = np.linalg.norm(err, np.inf)
-
-                # print progress
-                if print_status == True:
-                    print(f"Time step t={t+1}, Iteration k={k}. Maximum energy conservation error is {max_err} m.")
-
-                if max_err < tol:
-                    # if successful,  break from loop
-                    break
+                    ### Step 3: compute h^{k+1} and q^{k+1}
+                    A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
+                    A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
+                    A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
                     
-            q[:, t] = qk.T
-            h[:, t] = hk.T
-            
-        # convert results to pandas dataframe
-        column_names_q = [f'q_{t+1}' for t in range(net_info['nt'])]
-        q_df = pd.DataFrame(q, columns=column_names_q)
-        q_df.insert(0, 'link_ID', link_df['link_ID'])
+                    inv_A11_diag = 1 / A11_diag; # diagonal elements of the inverse of A11
+                    inv_A11 = sp.diags(inv_A11_diag.T, [0]) # inverse of A11, allocated as a sparse, diagonal matrix
 
-        column_names_h = [f'h_{t+1}' for t in range(net_info['nt'])]
-        h_df = pd.DataFrame(h, columns=column_names_h)
-        h_df.insert(0, 'node_ID', node_df['node_ID'])
-
-    
-    
-
-    ### Newton-Raphson hydraulic solver using Schur complement for efficient factorisation ###
-    elif method == 'nr_schur':
-        ### Step 1: unload network and hydraulic data
-        A12 = wdn.A12
-        A10 = wdn.A10
-        net_info = wdn.net_info
-        link_df = wdn.link_df
-        node_df = wdn.node_df
-        demand_df = wdn.demand_df
-        h0_df = wdn.h0_df
-
-        # compute loss coefficients
-        K = np.zeros((net_info['np'], 1))
-        for idx, row in link_df.iterrows():
-            if row['link_type'] == 'pipe':
-                K[idx] = friction_loss(net_info, row)
-
-            elif row['link_type'] == 'valve':
-                K[idx] = local_loss(row)
-                
-        n_exp = link_df['n_exp'].astype(float).to_numpy().reshape(-1, 1)
-            
-        # set stopping criteria
-        tol = 1e-5
-        kmax = 50 
-
-        # small values in A11 make convergence unsteady; therefore, we need to define a lower bound -- see Todini (1988), page 7
-        tol_A11 = 1e-5
-
-        # set solution arrays
-        q = np.zeros((net_info['np'], net_info['nt']))
-        h = np.zeros((net_info['nn'], net_info['nt']))
-
-
-        # run over all time steps
-        for t in range(net_info['nt']):
-            
-            ### Step 2: set initial values
-            hk = 130 * np.ones((net_info['nn'], 1))
-            qk = 0.03 * np.ones((net_info['np'], 1))
-
-            # set boundary head and demand conditions
-            dk = demand_df.iloc[:, t+1].to_numpy(); dk = dk.reshape(-1, 1)
-            h0k = h0_df.iloc[:, t+1].to_numpy(); h0k = h0k.reshape(-1, 1)
-
-            # begin iterations
-            for k in range(kmax):
-
-                ### Step 3: compute h^{k+1} and q^{k+1}
-                A11_diag = K * (abs(qk) ** (n_exp - 1)) # diagonal elements of matrix A11
-                A11_diag[A11_diag < tol_A11] = tol_A11 # replace with small value = tol_A11
-                A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
-                
-                inv_A11_diag = 1 / A11_diag; # diagonal elements of the inverse of A11
-                inv_A11 = sp.diags(inv_A11_diag.T, [0]) # inverse of A11, allocated as a sparse, diagonal matrix
-
-                inv_N = sp.diags(1/n_exp.T, [0]) # inverse of matrix N
-                
-                DD = inv_N @ inv_A11 # matrix inv_N * inv_A11
-
-                b = -A12.T @ inv_N @ (qk + inv_A11 @ (A10 @ h0k)) + A12.T @ qk - dk # right-hand side of linear system for finding h^{k+1]
-                A = A12.T @ DD @ A12 # Schur complement
-
-                # solve linear system for h^{k+1]
-                hk = sp.linalg.spsolve(A, b); hk = hk.reshape(-1, 1)
-                
-                # solve q^{k+1} by substitution
-                I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
-                qk = (I - inv_N) @ qk - DD @ ((A12 @ hk) + (A10 @ h0k))
-                
-                ### Step 4: convergence check 
-                err = A11 @ qk + A12 @ hk + A10 @ h0k
-                max_err = np.linalg.norm(err, np.inf)
-
-                # print progress
-                if print_status == True:
-                    print(f"Time step t={t+1}, Iteration k={k}. Maximum energy conservation error is {max_err} m.")
-
-                if max_err < tol:
-                    # if successful,  break from loop
-                    break
+                    inv_N = sp.diags(1/n_exp.T, [0]) # inverse of matrix N
                     
-            q[:, t] = qk.T
-            h[:, t] = hk.T
-            
-        # convert results to pandas dataframe
-        column_names_q = [f'q_{t+1}' for t in range(net_info['nt'])]
-        q_df = pd.DataFrame(q, columns=column_names_q)
-        q_df.insert(0, 'link_ID', link_df['link_ID'])
+                    DD = inv_N @ inv_A11 # matrix inv_N * inv_A11
 
-        column_names_h = [f'h_{t+1}' for t in range(net_info['nt'])]
-        h_df = pd.DataFrame(h, columns=column_names_h)
-        h_df.insert(0, 'node_ID', node_df['node_ID'])
+                    b = -A12.T @ inv_N @ (qk + inv_A11 @ (A10 @ h0k)) + A12.T @ qk - dk # right-hand side of linear system for finding h^{k+1]
+                    A = A12.T @ DD @ A12 # Schur complement
+
+                    # solve linear system for h^{k+1]
+                    hk = sp.linalg.spsolve(A, b); hk = hk.reshape(-1, 1)
+                    
+                    # solve q^{k+1} by substitution
+                    I = sp.eye(net_info['np'], format='csr') # identiy matrix with dimension np x np, allocated as a sparse matrix
+                    qk = (I - inv_N) @ qk - DD @ ((A12 @ hk) + (A10 @ h0k))
+                    
+
+                elif method == 'null_space':
+                    # insert code here...
+                    q_df = []
+                    h_df = []
+
+            except:
+                print('No solver method was inputted.')
+
+
+
+            ### Step 4: convergence check 
+            err = A11 @ qk + A12 @ hk + A10 @ h0k
+            max_err = np.linalg.norm(err, np.inf)
+
+            # print progress
+            if print_status == True:
+                print(f"Time step t={t+1}, Iteration k={k}. Maximum energy conservation error is {max_err} m.")
+
+            if max_err < tol:
+                # if successful,  break from loop
+                break
+                
+        q[:, t] = qk.T
+        h[:, t] = hk.T
+        
+    # convert results to pandas dataframe
+    column_names_q = [f'q_{t+1}' for t in range(net_info['nt'])]
+    q_df = pd.DataFrame(q, columns=column_names_q)
+    q_df.insert(0, 'link_ID', link_df['link_ID'])
+
+    column_names_h = [f'h_{t+1}' for t in range(net_info['nt'])]
+    h_df = pd.DataFrame(h, columns=column_names_h)
+    h_df.insert(0, 'node_ID', node_df['node_ID'])
 
     
     return q_df, h_df
