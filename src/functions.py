@@ -338,7 +338,7 @@ def plot_network(wdn, plot_type='layout', vals=None, t=None):
         max_val = max(node_vals_all)
 
         # plot hydraulic heads
-        cmap = cm.get_cmap('RdYlGn')
+        cmap = cm.get_cmap('RdYlBu')
         nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=30, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
 
@@ -361,7 +361,7 @@ def plot_network(wdn, plot_type='layout', vals=None, t=None):
         pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
 
         # Define colormap
-        cmap = cm.get_cmap('RdYlGn')
+        cmap = cm.get_cmap('RdYlBu')
 
         edge_values = nx.get_edge_attributes(uG, f'q_{t}')
         edge_values = list(edge_values.values())
