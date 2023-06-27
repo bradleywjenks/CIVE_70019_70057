@@ -558,7 +558,7 @@ def hydraulic_solver(wdn, method=None, print_status=False):
                     A11 = sp.diags(A11_diag.T, [0]) # matrix A11, allocated as a sparse diagonal matrix
                     
 
-                ### Null space solver reference: Abraham, E. and Stoianov, I. (2016), 'Abraham, Edo, and Ivan Stoianov. "Sparse null space algorithms for hydraulic analysis of large-scale water supply networks.' Journal of Hydraulic Engineering, vol. 142, no. 3. ###
+                ### Null space solver reference: Abraham, E. and Stoianov, I. (2016), "Sparse null space algorithms for hydraulic analysis of large-scale water supply networks.' Journal of Hydraulic Engineering, vol. 142, no. 3. ###
                 elif method == 'null_space':
                     
                     ### Step 3: compute h^{k+1} and q^{k+1}
