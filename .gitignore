@@ -1,5 +1,5 @@
-temp.bin
-temp.inp
-temp.rpt
+*temp.bin
+*temp.inp
+*temp.rpt
 
 src/null_space_code.py
