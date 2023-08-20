@@ -10,5 +10,5 @@ The following references were used to prepare these notebooks:
 - Todini, E. and Pilati, S. (1988). 'A gradient algorithm for the analysis of pipe networks.' Computer application in water supply, Vol. I—System analysis and simulation, B. Coulbeck and O. Choun-Hou, eds., Wiley, London, 1–20.
 - Abraham, E. and Stoianov, I. (2016). 'Sparse null space algorithms for hydraulic analysis of large-scale water supply networks.' Journal of Hydraulic Engineering, 142(3), 04015058.
 
-#### Parameter estimation 
-- Enter references here...
+#### Pressure control 
+- Wright, R., Abraham, E., Parpas, P., Stoianov, I. (2015). 'Control of water distribution networks with dynamic dma topology using strictly feasible sequential convex programming.' Water Resources Research 51(12), 9925–9941, doi: 10.1002/2015WR017466.
