@@ -232,7 +232,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color='black') # draw reservoir nodes
 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=[pcv_nodes], node_size=80, node_shape='d', node_color='red') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='red') # draw pcv nodes (downstream node)
 
 
     elif plot_type == 'head':
@@ -257,7 +257,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=30, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=[pcv_nodes], node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
 
         # create a color bar
         sm = plt.cm.ScalarMappable(cmap=cmap)
@@ -292,7 +292,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color='black') 
         nx.draw_networkx_edges(uG, pos, edge_color=edge_colors, width=2) 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=[pcv_nodes], node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
 
         # create a color bar
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
@@ -309,7 +309,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
 
     ## PCV labels
     if pcv_nodes is not None:
-        pcv_labels = {node: 'PCV' for node in [pcv_nodes]}
+        pcv_labels = {node: 'PCV' for node in pcv_nodes}
         labels_2 = nx.draw_networkx_labels(uG, pos, pcv_labels, font_size=12, verticalalignment='bottom')
         for _, label in labels_2.items():
             label.set_y(label.get_position()[1] + 80)
