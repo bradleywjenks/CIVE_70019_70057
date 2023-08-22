@@ -228,11 +228,11 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
         pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
 
-        nx.draw(uG, pos, node_size=30, node_shape='o', node_color='black')
+        nx.draw(uG, pos, node_size=25, node_shape='o', node_color='black')
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color='black') # draw reservoir nodes
 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='red') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='red') # draw pcv nodes (downstream node)
 
 
     elif plot_type == 'head':
@@ -254,10 +254,10 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
 
         # plot hydraulic heads
         cmap = cm.get_cmap('RdYlBu')
-        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=30, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
+        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=25, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
 
         # create a color bar
         sm = plt.cm.ScalarMappable(cmap=cmap)
@@ -292,7 +292,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color='black') 
         nx.draw_networkx_edges(uG, pos, edge_color=edge_colors, width=2) 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=80, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
 
         # create a color bar
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
