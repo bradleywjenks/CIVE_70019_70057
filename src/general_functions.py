@@ -274,7 +274,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, vals=None, t=None):
         vals_df = vals.set_index('node_ID')[f'h_{t}']
         h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
 
-        junction_vals = [vals_df[node] - node_df.loc[node_df['node_ID'] == node, 'elev'] for node in net_info['junction_names']]
+        junction_vals = [vals_df[node] - node_df.loc[node_df['node_ID'] == node, 'elev'][0] for node in net_info['junction_names']]
         reservoir_vals = [0 for node in net_info['reservoir_names']]
         node_vals_all = junction_vals + reservoir_vals
 
