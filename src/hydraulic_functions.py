@@ -76,7 +76,7 @@ def epanet_solver(inp_file):
     h_df.columns = col_names_h
     h_df.reset_index(drop=False, inplace=True)
     h_df = h_df.rename(columns={'name': 'node_ID'})
-    if nt > 1:
+    if nt % 24 != 0:
         h_df = h_df.iloc[:, :-1] # delete last time step
 
     reservoir_names = wn.reservoir_name_list
@@ -88,7 +88,7 @@ def epanet_solver(inp_file):
     q_df.columns = col_names_q
     q_df.reset_index(drop=False, inplace=True)
     q_df = q_df.rename(columns={'name': 'link_ID'})
-    if nt > 1:
+    if nt % 24 != 0:
         q_df = q_df.iloc[:, :-1] # delete last time step
 
 

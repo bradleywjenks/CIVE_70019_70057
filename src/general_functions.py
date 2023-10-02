@@ -267,7 +267,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, sensor_nodes=None, val
         sm = plt.cm.ScalarMappable(cmap=cmap)
         sm.set_array(node_vals_all)
         colorbar = plt.colorbar(sm)
-        colorbar.set_label('Hydraulic head [m]', fontsize=12)
+        colorbar.set_label('Hydraulic head [m]', fontsize=14)
 
     elif plot_type == 'pressure head':
 
@@ -297,7 +297,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, sensor_nodes=None, val
         sm = plt.cm.ScalarMappable(cmap=cmap)
         sm.set_array(node_vals_all)
         colorbar = plt.colorbar(sm)
-        colorbar.set_label('Pressure head [m]', fontsize=12)
+        colorbar.set_label('Pressure head [m]', fontsize=14)
 
 
     elif plot_type == 'flow':
@@ -332,7 +332,7 @@ def plot_network(wdn, plot_type='layout', pcv_nodes=None, sensor_nodes=None, val
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
         sm.set_array(edge_values)
         colorbar = plt.colorbar(sm)
-        colorbar.set_label('Flow [L/s]', fontsize=12)       
+        colorbar.set_label('Flow [L/s]', fontsize=14)       
 
     
     ## reservoir labels
