@@ -80,7 +80,7 @@ def epanet_solver(inp_file):
         h_df = h_df.iloc[:, :-1] # delete last time step
 
     reservoir_names = wn.reservoir_name_list
-    h_df = h_df[~h_df['node_ID'].isin(reservoir_names)] # delete reservoir nodes
+        
 
     ## get flow results
     q_df = results.link['flowrate'].T
