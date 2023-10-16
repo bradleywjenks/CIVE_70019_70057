@@ -4,5 +4,5 @@
 
 src/null_space_code.py
 
-notebooks/parameter_estimation_cja.ipynb
+notebooks/optimal_tank_solution.ipynb
 notebooks/parameter_estimation.ipynb
