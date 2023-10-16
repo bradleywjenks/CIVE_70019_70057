@@ -12,3 +12,5 @@ The following references were used to prepare these notebooks:
 
 #### Pressure control 
 - Wright, R., Abraham, E., Parpas, P., Stoianov, I. (2015). 'Control of water distribution networks with dynamic dma topology using strictly feasible sequential convex programming.' Water Resources Research 51(12), 9925–9941, doi: 10.1002/2015WR017466.
+
+CVXPY tutorials can be found here: https://www.cvxpy.org/examples/index.html.
