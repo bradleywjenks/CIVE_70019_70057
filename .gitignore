@@ -5,4 +5,5 @@
 src/null_space_code.py
 
 notebooks/optimal_tank_solution.ipynb
-notebooks/parameter_estimation.ipynb
+notebooks/parameter_estimation_old.ipynb
+notebooks/parameter_estimation_solution.ipynb

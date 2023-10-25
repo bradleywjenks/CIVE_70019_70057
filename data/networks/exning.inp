@@ -1,0 +1,2082 @@
+[TITLE]
+
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ node_0066       	14.100001   	1           	DEM_PATT_04     	;				
+ node_0067       	14          	0           	                	;				
+ node_0068       	14          	3           	DEM_PATT_04     	;				
+ node_0069       	19.5        	3           	DEM_PATT_04     	;				
+ node_0070       	20          	0           	                	;				
+ node_0071       	19.299999   	10          	DEM_PATT_04     	;				
+ node_0072       	17.799999   	14          	DEM_PATT_04     	;				
+ node_0073       	15.2        	0           	                	;				
+ node_0074       	15.699999   	0           	                	;				
+ node_0075       	18.8        	0           	                	;				
+ node_0076       	18.200001   	0           	                	;				
+ node_0077       	19.8        	0           	                	;				
+ node_0078       	20.999999   	67          	DEM_PATT_04     	;				
+ node_0079       	15.3        	0           	                	;				
+ node_0080       	15.699999   	0           	                	;				
+ node_0081       	15.3        	0           	                	;				
+ node_0082       	15          	0           	                	;				
+ node_0083       	15.3        	0           	                	;				
+ node_0084       	15.3        	0           	                	;				
+ node_0085       	15.3        	0           	                	;				
+ node_0086       	15.3        	0           	                	;				
+ node_0087       	15.3        	0           	                	;				
+ node_0088       	15.399999   	0           	                	;				
+ node_0089       	15.3        	0           	                	;				
+ node_0090       	18.299999   	0           	                	;				
+ node_0091       	19.5        	0           	                	;				
+ node_0092       	19.5        	0           	                	;				
+ node_0093       	21.599999   	0           	                	;				
+ node_0094       	21.599999   	0           	                	;				
+ node_0095       	19.4        	0           	                	;				
+ node_0096       	19.8        	0           	                	;				
+ node_0097       	19.8        	0           	                	;				
+ node_0098       	19.700002   	0           	                	;				
+ node_0099       	20          	0           	                	;				
+ node_0100       	15.3        	0           	                	;				
+ node_0101       	17.4        	0           	                	;				
+ node_0102       	17.4        	0           	                	;				
+ node_0103       	16.8        	0           	                	;				
+ node_0104       	16.8        	0           	                	;				
+ node_0105       	18.4        	0           	                	;				
+ node_0106       	17.9        	0           	                	;				
+ node_0107       	18.6        	0           	                	;				
+ node_0108       	17.299999   	0           	                	;				
+ node_0109       	18.4        	12          	DEM_PATT_04     	;				
+ node_0110       	17.9        	0           	                	;				
+ node_0111       	16          	0           	                	;				
+ node_0112       	21.599999   	0           	                	;				
+ node_0113       	21.599999   	0           	                	;				
+ node_0114       	16.8        	0           	                	;				
+ node_0115       	17.5        	0           	                	;				
+ node_0116       	15.5        	0           	                	;				
+ node_0117       	33.000001   	2           	DEM_PATT_02     	;				
+ node_0121       	22.300001   	0           	                	;				
+ node_0131       	21.799999   	0           	                	;				
+ node_0135       	21.799999   	0           	                	;				
+ node_0143       	18.5        	3           	DEM_PATT_04     	;				
+ node_0144       	16.5        	40          	DEM_PATT_04     	;				
+ node_0145       	17.600001   	2           	DEM_PATT_04     	;				
+ node_0146       	26.000001   	3           	DEM_PATT_04     	;				
+ node_0147       	20.999999   	11          	DEM_PATT_04     	;				
+ node_0148       	18          	0           	                	;				
+ node_0150       	18.899999   	0           	                	;				
+ node_0151       	18.1        	0           	                	;				
+ node_0152       	18.5        	0           	                	;				
+ node_0153       	17.200001   	0           	                	;				
+ node_0154       	17.799999   	0           	                	;				
+ node_0155       	16.700001   	0           	                	;				
+ node_0156       	17          	0           	                	;				
+ node_0157       	17.9        	0           	                	;				
+ node_0158       	17.799999   	0           	                	;				
+ node_0159       	17.200001   	0           	                	;				
+ node_0160       	17.5        	0           	                	;				
+ node_0161       	17.7        	0           	                	;				
+ node_0162       	18.200001   	0           	                	;				
+ node_0163       	18.299999   	0           	                	;				
+ node_0164       	24.400001   	0           	                	;				
+ node_0165       	24.3        	0           	                	;				
+ node_0167       	15.3        	0           	                	;				
+ node_0168       	19          	0           	                	;				
+ node_0169       	15.3        	0           	                	;				
+ node_0170       	17.449999   	10          	DEM_PATT_04     	;				
+ node_0171       	17.077      	0           	                	;				
+ node_0399       	23          	0           	                	;				
+ node_0400       	23          	0           	                	;				
+ node_0402       	18.5        	15          	DEM_PATT_04     	;				
+ node_0403       	20.200001   	0           	                	;				
+ node_0404       	15.3        	0           	                	;				
+ node_0409       	22.300001   	0           	                	;				
+ node_0447       	23          	0           	                	;				
+ node_0448       	25.000001   	0           	                	;				
+ node_0449       	23          	2           	DEM_PATT_08     	;				
+ node_0450       	19.4        	28.999998   	DEM_PATT_04     	;				
+ node_0451       	20          	12          	DEM_PATT_04     	;				
+ node_0452       	19.5        	11          	DEM_PATT_04     	;				
+ node_0453       	18.299999   	14          	DEM_PATT_04     	;				
+ node_0454       	17.9        	18          	DEM_PATT_04     	;				
+ node_0455       	17          	0           	                	;				
+ node_0456       	17.5        	0           	                	;				
+ node_0457       	21.599999   	1           	DEM_PATT_10     	;				
+ node_0458       	16.8        	0           	                	;				
+ node_0459       	18.4        	0           	                	;				
+ node_0460       	17.299999   	8           	DEM_PATT_04     	;				
+ node_0461       	15.3        	1           	DEM_PATT_04     	;				
+ node_0462       	15.3        	18          	DEM_PATT_04     	;				
+ node_0463       	15.3        	0           	                	;				
+ node_0464       	15.3        	25          	DEM_PATT_04     	;				
+ node_0465       	15.3        	34          	DEM_PATT_04     	;				
+ node_0466       	15.699999   	0           	                	;				
+ node_0467       	15.399999   	14          	DEM_PATT_04     	;				
+ node_0468       	19          	26          	DEM_PATT_04     	;				
+ node_0469       	15          	0           	                	;				
+ node_0470       	19.8        	0           	                	;				
+ node_0471       	18.5        	23          	DEM_PATT_04     	;				
+ node_0472       	15.5        	0           	                	;				
+ node_0473       	15.399999   	15          	DEM_PATT_04     	;				
+ node_0474       	17.5        	9           	DEM_PATT_04     	;				
+ node_0475       	22.300001   	0           	                	;				
+ node_0476       	21.799999   	0           	                	;				
+ node_0488       	14.6        	7           	DEM_PATT_04     	;				
+ node_0489       	15.3        	6           	DEM_PATT_04     	;				
+ node_0490       	15.3        	1           	DEM_PATT_04     	;				
+ node_0491       	16.2        	0           	                	;				
+ node_0492       	16.899999   	0           	                	;				
+ node_0493       	17.600001   	0           	                	;				
+ node_0494       	17.299999   	7           	DEM_PATT_04     	;				
+ node_0495       	17.200001   	0           	                	;				
+ node_0496       	16.1        	5           	DEM_PATT_04     	;				
+ node_0497       	17.799999   	0           	                	;				
+ node_0498       	18.299999   	0           	                	;				
+ node_0499       	18.1        	7           	DEM_PATT_04     	;				
+ node_0500       	18.200001   	0           	                	;				
+ node_0501       	17.4        	28.999998   	DEM_PATT_04     	;				
+ node_0502       	24.400001   	7           	DEM_PATT_04     	;				
+ node_0504       	27.700001   	0           	                	;				
+ node_0507       	17.08       	0           	                	;				
+ node_0655       	18          	12          	DEM_PATT_04     	;				
+ node_0665       	16.77       	24          	DEM_PATT_04     	;				
+ node_0666       	23          	0           	                	;				
+ node_0667       	22.300001   	0           	                	;				
+ node_0668       	22.300001   	0           	                	;				
+ node_0669       	22.300001   	0           	                	;				
+ node_0676       	17          	0           	                	;				
+ node_0677       	19.4        	0           	                	;				
+ node_0678       	19.4        	0           	                	;				
+ node_0679       	20.400001   	0           	                	;				
+ node_0680       	21.599999   	0           	                	;				
+ node_0681       	21.599999   	0           	                	;				
+ node_0682       	16.700001   	5           	DEM_PATT_04     	;				
+ node_0683       	16          	40          	DEM_PATT_04     	;				
+ node_0684       	23          	0           	                	;				
+ node_0685       	23          	0           	                	;				
+ node_0686       	22.63811    	0           	                	;				
+ node_0687       	22.624721   	0           	                	;				
+ node_0688       	22.624721   	0           	                	;				
+ node_0689       	20.700001   	90          	DEM_PATT_04     	;				
+ node_0690       	22.800001   	0           	                	;				
+ node_0691       	22.800001   	0           	                	;				
+ node_0692       	15.699999   	12          	DEM_PATT_04     	;				
+ node_0693       	15.3        	0           	                	;				
+ node_0694       	22.300001   	0           	                	;				
+ node_0695       	17.9        	9.16667     	DEM_PATT_04     	;				
+ node_0696       	17.600001   	0           	                	;				
+ node_0731       	22.300001   	0           	                	;				
+ node_0732       	22.300001   	0           	                	;				
+ node_0734       	20.127229   	1           	DEM_PATT_14     	;				
+ node_0735       	20.043913   	0           	                	;				
+ node_0736       	20.357373   	0           	                	;				
+ node_0737       	18.899999   	0           	                	;				
+ node_0739       	21.799999   	0           	                	;				
+ node_0742       	21.7        	0           	                	;				
+ node_0745       	14.100001   	0           	                	;				
+ node_0746       	19.8        	0           	                	;				
+ node_0747       	19.4        	0           	                	;				
+ node_0748       	19.5        	0           	                	;				
+ node_0749       	19.5        	0           	                	;				
+ node_0750       	18.299999   	0           	                	;				
+ node_0751       	20          	0           	                	;				
+ node_0752       	19.700002   	0           	                	;				
+ node_0753       	19.8        	0           	                	;				
+ node_0754       	17.498576   	0           	                	;				
+ node_0755       	22.999388   	0           	                	;				
+ node_0756       	23          	0           	                	;				
+ node_0757       	21.599999   	0           	                	;				
+ node_0758       	21.598867   	0           	                	;				
+ node_0759       	21.591202   	0           	                	;				
+ node_0760       	21.599999   	0           	                	;				
+ node_0761       	15.699999   	0           	                	;				
+ node_0762       	15.3        	0           	                	;				
+ node_0763       	20.999999   	0           	                	;				
+ node_0764       	19.8        	0           	                	;				
+ node_0765       	18.200001   	0           	                	;				
+ node_0766       	18.8        	0           	                	;				
+ node_0767       	15.699999   	0           	                	;				
+ node_0768       	15.2        	0           	                	;				
+ node_0769       	15.3        	0           	                	;				
+ node_0770       	15.399999   	0           	                	;				
+ node_0771       	15.3        	0           	                	;				
+ node_0772       	15.3        	0           	                	;				
+ node_0773       	15.3        	0           	                	;				
+ node_0774       	15.3        	0           	                	;				
+ node_0775       	15.3        	0           	                	;				
+ node_0776       	15          	0           	                	;				
+ node_0777       	15.3        	0           	                	;				
+ node_0778       	16          	0           	                	;				
+ node_0779       	17.9        	0           	                	;				
+ node_0780       	18.4        	0           	                	;				
+ node_0781       	17.299999   	0           	                	;				
+ node_0782       	18.6        	0           	                	;				
+ node_0783       	17.9        	0           	                	;				
+ node_0784       	18.4        	0           	                	;				
+ node_0785       	16.8        	0           	                	;				
+ node_0786       	16.8        	0           	                	;				
+ node_0787       	17.5        	0           	                	;				
+ node_0788       	17.4        	0           	                	;				
+ node_0789       	15.3        	0           	                	;				
+ node_0790       	15.5        	0           	                	;				
+ node_0791       	16.8        	0           	                	;				
+ node_0792       	17.5        	0           	                	;				
+ node_0793       	17.200001   	0           	                	;				
+ node_0794       	17.799999   	0           	                	;				
+ node_0795       	17.5        	0           	                	;				
+ node_0796       	17          	0           	                	;				
+ node_0797       	16.700001   	0           	                	;				
+ node_0798       	17.799999   	0           	                	;				
+ node_0799       	17.200001   	0           	                	;				
+ node_0800       	18.1        	0           	                	;				
+ node_0801       	18.899999   	0           	                	;				
+ node_0802       	24.400001   	0           	                	;				
+ node_0803       	18.299999   	0           	                	;				
+ node_0804       	18.200001   	0           	                	;				
+ node_0805       	17.7        	0           	                	;				
+ node_0806       	24.3        	0           	                	;				
+ node_0807       	15.3        	0           	                	;				
+ node_0808       	19          	0           	                	;				
+ node_0809       	15.3        	0           	                	;				
+ node_0811       	17.077823   	0           	                	;				
+ node_0827       	21.799999   	0           	                	;				
+ node_1062       	22.300001   	0           	                	;				
+ node_1063       	22.300001   	0           	                	;				
+ node_1064       	17.1        	0           	                	;				
+ node_1065       	23.899999   	0           	                	;				
+ node_1066       	19.794005   	0           	                	;				
+ node_1094       	20          	5           	DEM_PATT_05     	;				
+ node_1095       	20          	5           	DEM_PATT_05     	;				
+ node_1096       	20          	5           	DEM_PATT_05     	;				
+ node_1097       	20          	5           	DEM_PATT_05     	;				
+ node_1098       	20          	5           	DEM_PATT_05     	;				
+ node_1099       	20          	5           	DEM_PATT_05     	;				
+ node_1100       	20          	5           	DEM_PATT_05     	;				
+ node_1101       	20          	5           	DEM_PATT_05     	;				
+ node_1102       	20          	5           	DEM_PATT_05     	;				
+ node_1103       	20          	0           	                	;				
+ node_1104       	20          	5           	DEM_PATT_05     	;				
+ node_1105       	20          	0           	                	;				
+ node_1106       	20          	5           	DEM_PATT_05     	;				
+ node_1107       	20          	5           	DEM_PATT_05     	;				
+ node_1108       	20          	5           	DEM_PATT_05     	;				
+ node_1109       	20          	5           	DEM_PATT_05     	;				
+ node_1110       	20          	5           	DEM_PATT_05     	;				
+ node_1111       	20          	5           	DEM_PATT_05     	;				
+ node_1112       	20          	5           	DEM_PATT_05     	;				
+ node_1113       	20          	5           	DEM_PATT_05     	;				
+ node_1114       	20          	5           	DEM_PATT_05     	;				
+ node_1115       	20          	5           	DEM_PATT_05     	;				
+ node_1116       	20          	5           	DEM_PATT_05     	;				
+ node_1117       	20          	5           	DEM_PATT_05     	;				
+ node_1118       	15.399999   	0           	                	;				
+ node_1119       	15.399999   	0           	                	;				
+ node_1120       	21.799999   	1           	DEM_PATT_04     	;				
+ node_1121       	15.600001   	0           	                	;				
+ node_1122       	15.3        	0           	                	;				
+ node_1123       	19.899999   	4           	DEM_PATT_04     	;				
+ node_1124       	19.5        	0           	                	;				
+ node_1125       	17.9        	20          	DEM_PATT_04     	;				
+ node_1126       	19.5        	0           	                	;				
+ node_1127       	19.5        	0           	                	;				
+ node_1128       	20          	0           	                	;				
+ node_1129       	20          	0           	                	;				
+ node_1130       	20.1        	0           	                	;				
+ node_1131       	20.200001   	0           	                	;				
+ node_1135       	15.2        	1           	DEM_PATT_04     	;				
+ node_1136       	16.5        	9           	DEM_PATT_04     	;				
+ node_1137       	15.3        	15          	DEM_PATT_04     	;				
+ node_1138       	20          	20          	DEM_PATT_06     	;				
+ node_1139       	20          	0           	                	;				
+ node_1140       	20          	4           	DEM_PATT_06     	;				
+ node_1141       	20          	0           	                	;				
+ node_1142       	20          	17          	DEM_PATT_06     	;				
+ node_1143       	20          	5           	DEM_PATT_05     	;				
+ node_1144       	20          	5           	DEM_PATT_05     	;				
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+ reservoir_1     	60          	                	;					
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ link_0045       	node_0666       	node_0400       	4.471       	148         	117         	0           	OPEN  	;
+ link_0046       	node_0756       	node_0666       	40.276001   	148         	117         	0           	OPEN  	;
+ link_0047       	node_0476       	node_0669       	530.780029  	203         	99          	0           	OPEN  	;
+ link_0059       	node_0665       	node_0493       	635.119995  	76          	99          	0           	OPEN  	;
+ link_0060       	node_0507       	node_0665       	195.330002  	76          	99          	0           	OPEN  	;
+ link_0102       	node_0499       	node_0500       	3.561       	76          	109         	0           	OPEN  	;
+ link_0103       	node_0495       	node_0500       	58.378002   	76          	109         	0           	OPEN  	;
+ link_0104       	node_0148       	node_0798       	9.897       	76          	99          	0           	OPEN  	;
+ link_0105       	node_0492       	node_0495       	21.299999   	76          	99          	0           	OPEN  	;
+ link_0106       	node_0489       	node_0797       	115.599998  	78          	117         	0           	OPEN  	;
+ link_0107       	node_0494       	node_0796       	49.483002   	101         	99          	0           	OPEN  	;
+ link_0108       	node_0497       	node_0157       	3.621       	101         	99          	0           	OPEN  	;
+ link_0109       	node_0501       	node_0794       	123.639999  	76          	99          	0           	OPEN  	;
+ link_0111       	node_0143       	node_0792       	138.600006  	78          	117         	0           	OPEN  	;
+ link_0112       	node_0801       	node_1065       	78.445724   	51          	99          	0           	OPEN  	;
+ link_0113       	node_0151       	node_0499       	6.88        	76          	99          	0           	OPEN  	;
+ link_0114       	node_0152       	node_0499       	8.356       	76          	109         	0           	OPEN  	;
+ link_0115       	node_0153       	node_0495       	4.783       	76          	99          	0           	OPEN  	;
+ link_0116       	node_0154       	node_0493       	4.288       	76          	99          	0           	OPEN  	;
+ link_0117       	node_0155       	node_0492       	4.59        	78          	117         	0           	OPEN  	;
+ link_0118       	node_0156       	node_0492       	16.923      	101         	99          	0           	OPEN  	;
+ link_0119       	node_0795       	node_0494       	86.524002   	101         	99          	0           	OPEN  	;
+ link_0120       	node_0737       	node_0501       	2.874196    	101         	138         	0           	OPEN  	;
+ link_0121       	node_0159       	node_0501       	5.284       	76          	99          	0           	OPEN  	;
+ link_0122       	node_0160       	node_0497       	3.88        	78          	117         	0           	OPEN  	;
+ link_0123       	node_0161       	node_0494       	7.078       	78          	117         	0           	OPEN  	;
+ link_0124       	node_0162       	node_0498       	5.335       	78          	117         	0           	OPEN  	;
+ link_0127       	node_0491       	node_0793       	102.719994  	76          	99          	0           	OPEN  	;
+ link_0128       	node_0496       	node_0808       	46.480999   	76          	99          	0           	OPEN  	;
+ link_0129       	node_1136       	node_0496       	56.598      	76          	99          	0           	OPEN  	;
+ link_0130       	node_1137       	node_0496       	84.320007   	76          	99          	0           	OPEN  	;
+ link_0131       	node_0490       	node_0491       	35.511002   	76          	99          	0           	OPEN  	;
+ link_0132       	node_0488       	node_0809       	146.770004  	76          	99          	0           	OPEN  	;
+ link_0135       	node_0167       	node_0490       	2.177       	76          	99          	0           	OPEN  	;
+ link_0136       	node_0168       	node_0491       	3.583       	76          	99          	0           	OPEN  	;
+ link_0137       	node_0169       	node_0490       	4.354       	76          	99          	0           	OPEN  	;
+ link_0138       	node_0498       	node_0805       	19.381001   	78          	117         	0           	OPEN  	;
+ link_0139       	node_0145       	node_0804       	32.630001   	78          	117         	0           	OPEN  	;
+ link_0140       	node_0502       	node_0803       	124.419998  	78          	117         	0           	OPEN  	;
+ link_0141       	node_0146       	node_0802       	29.469999   	78          	117         	0           	OPEN  	;
+ link_0142       	node_0147       	node_0806       	64.709999   	78          	117         	0           	OPEN  	;
+ link_0143       	node_0500       	node_0150       	15.006      	51          	99          	0           	OPEN  	;
+ link_0144       	node_0163       	node_0498       	5.13        	78          	117         	0           	OPEN  	;
+ link_0145       	node_0164       	node_0502       	3.686       	78          	117         	0           	OPEN  	;
+ link_0146       	node_0165       	node_0502       	4.704       	78          	117         	0           	OPEN  	;
+ link_0440       	node_0171       	node_0507       	0.101       	78          	117         	0           	OPEN  	;
+ link_0441       	node_0170       	node_0811       	226.300003  	78          	117         	0           	OPEN  	;
+ link_0471       	node_0131       	node_0476       	1.99        	203         	99          	0           	OPEN  	;
+ link_0474       	node_0135       	node_0476       	2.283       	76          	99          	0           	OPEN  	;
+ link_0483       	node_0474       	node_0115       	5.324       	76          	99          	0           	OPEN  	;
+ link_0484       	node_0754       	node_0790       	620.720032  	76          	99          	0           	OPEN  	;
+ link_0485       	node_0116       	node_0473       	23.459999   	76          	99          	0           	OPEN  	;
+ link_0498       	node_0121       	node_0475       	5.718       	78          	117         	0           	OPEN  	;
+ link_0505       	node_0117       	node_0827       	550.76001   	76          	99          	0           	OPEN  	;
+ link_0511       	node_0083       	node_0463       	1.477       	76          	99          	0           	OPEN  	;
+ link_0512       	node_0084       	node_0462       	13.907      	76          	99          	0           	OPEN  	;
+ link_0513       	node_0144       	node_0766       	224.539993  	100         	117         	0           	OPEN  	;
+ link_0514       	node_0466       	node_0468       	141.550003  	76          	99          	0           	OPEN  	;
+ link_0515       	node_0471       	node_0472       	84.731003   	76          	99          	0           	OPEN  	;
+ link_0516       	node_0470       	node_0471       	68.386002   	76          	99          	0           	OPEN  	;
+ link_0517       	node_0468       	node_0470       	53.066002   	76          	99          	0           	OPEN  	;
+ link_0518       	node_0470       	node_0077       	0.959       	78          	117         	0           	OPEN  	;
+ link_0519       	node_0467       	node_0777       	96.566994   	76          	99          	0           	OPEN  	;
+ link_0520       	node_0469       	node_0467       	65.040001   	78          	117         	0           	OPEN  	;
+ link_0521       	node_0067       	node_0469       	14.042      	78          	117         	0           	OPEN  	;
+ link_0522       	node_0068       	node_0776       	83.291      	78          	117         	0           	OPEN  	;
+ link_0523       	node_0462       	node_0775       	1.476       	76          	99          	0           	OPEN  	;
+ link_0524       	node_0461       	node_0085       	1.992       	76          	99          	0           	OPEN  	;
+ link_0525       	node_0473       	node_0772       	117.290001  	76          	99          	0           	OPEN  	;
+ link_0526       	node_0467       	node_0088       	5.469       	75          	138         	0           	OPEN  	;
+ link_0527       	node_0465       	node_0769       	60.891003   	78          	117         	0           	OPEN  	;
+ link_0528       	node_0451       	node_0753       	112.190002  	76          	128         	0           	OPEN  	;
+ link_0529       	node_0070       	node_0451       	1.931       	76          	99          	0           	OPEN  	;
+ link_0530       	node_0452       	node_0092       	2.144       	100         	117         	0           	OPEN  	;
+ link_0531       	node_0069       	node_0749       	24.098      	100         	117         	0           	OPEN  	;
+ link_0532       	node_0451       	node_0099       	1.847       	100         	117         	0           	OPEN  	;
+ link_0533       	node_0464       	node_0761       	128.889999  	76          	138         	0           	OPEN  	;
+ link_0534       	node_0463       	node_0079       	3.325       	76          	99          	0           	OPEN  	;
+ link_0535       	node_0460       	node_0101       	7.968       	76          	109         	0           	OPEN  	;
+ link_0536       	node_0655       	node_0787       	43.725998   	76          	99          	0           	OPEN  	;
+ link_0537       	node_0455       	node_0453       	80.925995   	76          	138         	0           	OPEN  	;
+ link_0538       	node_0458       	node_0460       	45.158001   	78          	117         	0           	OPEN  	;
+ link_0539       	node_0455       	node_0104       	5.645       	78          	117         	0           	OPEN  	;
+ link_0540       	node_0071       	node_0782       	43.800999   	100         	117         	0           	OPEN  	;
+ link_0541       	node_0456       	node_0458       	32.782001   	100         	117         	0           	OPEN  	;
+ link_0542       	node_0456       	node_0108       	6.431       	100         	117         	0           	OPEN  	;
+ link_0543       	node_0454       	node_0456       	42.862      	100         	117         	0           	OPEN  	;
+ link_0544       	node_0459       	node_0105       	13.471001   	100         	117         	0           	OPEN  	;
+ link_0545       	node_0072       	node_0779       	115.359993  	78          	117         	0           	OPEN  	;
+ link_0546       	node_0457       	node_0093       	1.828       	148         	117         	0           	OPEN  	;
+ link_0547       	node_0768       	node_0488       	63.409      	76          	138         	0           	OPEN  	;
+ link_0548       	node_0472       	node_0111       	8.016       	102         	99          	0           	OPEN  	;
+ link_0549       	node_0455       	node_0114       	5.899       	76          	138         	0           	OPEN  	;
+ link_0550       	node_0074       	node_0466       	1.408       	78          	117         	0           	OPEN  	;
+ link_0551       	node_0075       	node_0468       	9.478001    	100         	117         	0           	OPEN  	;
+ link_0552       	node_0076       	node_0471       	5.89        	78          	117         	0           	OPEN  	;
+ link_0553       	node_0764       	node_0763       	211.25      	78          	117         	0           	OPEN  	;
+ link_0554       	node_0078       	node_0765       	190.669998  	78          	117         	0           	OPEN  	;
+ link_0555       	node_0762       	node_0464       	62.25       	76          	138         	0           	OPEN  	;
+ link_0556       	node_0080       	node_0466       	13.976      	76          	128         	0           	OPEN  	;
+ link_0557       	node_0081       	node_0463       	12.931      	76          	99          	0           	OPEN  	;
+ link_0558       	node_0082       	node_0469       	1.653       	78          	117         	0           	OPEN  	;
+ link_0559       	node_0447       	node_0448       	473.839996  	78          	117         	0           	OPEN  	;
+ link_0560       	node_0773       	node_0774       	41.472004   	76          	99          	0           	OPEN  	;
+ link_0561       	node_0086       	node_0461       	4.664       	76          	99          	0           	OPEN  	;
+ link_0562       	node_0087       	node_0465       	2.732       	75          	138         	0           	OPEN  	;
+ link_0563       	node_0770       	node_0771       	96.304001   	75          	138         	0           	OPEN  	;
+ link_0564       	node_0089       	node_0461       	2.316       	78          	117         	0           	OPEN  	;
+ link_0565       	node_0090       	node_0453       	4.019       	100         	117         	0           	OPEN  	;
+ link_0566       	node_0091       	node_0452       	4.462       	100         	117         	0           	OPEN  	;
+ link_0567       	node_0748       	node_0750       	143.699997  	100         	117         	0           	OPEN  	;
+ link_0568       	node_0758       	node_1066       	869.528198  	148         	117         	0           	OPEN  	;
+ link_0569       	node_0094       	node_0457       	2.491       	148         	117         	0           	OPEN  	;
+ link_0570       	node_0095       	node_0450       	2.459       	148         	117         	0           	OPEN  	;
+ link_0571       	node_0096       	node_0450       	6.121       	148         	117         	0           	OPEN  	;
+ link_0572       	node_0097       	node_0450       	4.46        	76          	99          	0           	OPEN  	;
+ link_0573       	node_0098       	node_0452       	16.976      	100         	117         	0           	OPEN  	;
+ link_0574       	node_0751       	node_0752       	141.089996  	100         	117         	0           	OPEN  	;
+ link_0575       	node_0100       	node_0464       	8.044       	76          	109         	0           	OPEN  	;
+ link_0576       	node_0102       	node_0460       	3.205       	76          	99          	0           	OPEN  	;
+ link_0577       	node_0103       	node_0458       	1.339       	78          	117         	0           	OPEN  	;
+ link_0578       	node_0784       	node_0783       	114.379997  	100         	117         	0           	OPEN  	;
+ link_0579       	node_0106       	node_0454       	3.492       	100         	117         	0           	OPEN  	;
+ link_0580       	node_0107       	node_0459       	1.875       	100         	117         	0           	OPEN  	;
+ link_0581       	node_0781       	node_0780       	89.090996   	100         	117         	0           	OPEN  	;
+ link_0582       	node_0109       	node_0459       	1.291       	100         	117         	0           	OPEN  	;
+ link_0583       	node_0110       	node_0454       	9.000999    	78          	117         	0           	OPEN  	;
+ link_0584       	node_0112       	node_0760       	153.119995  	102         	132         	0           	OPEN  	;
+ link_0585       	node_0791       	node_0462       	162.790009  	76          	138         	0           	OPEN  	;
+ link_0586       	node_0472       	node_0073       	7.539       	76          	99          	0           	OPEN  	;
+ link_0590       	node_0409       	node_1062       	1.703514    	203         	99          	0           	OPEN  	;
+ link_0591       	node_0667       	node_0668       	12.308      	148         	117         	0           	OPEN  	;
+ link_0592       	node_0667       	node_0669       	14.169      	203         	99          	0           	OPEN  	;
+ link_0666       	node_0449       	node_0399       	3.6173      	148         	117         	0           	OPEN  	;
+ link_0687       	node_0788       	node_1064       	13.815922   	76          	128         	0           	OPEN  	;
+ link_0688       	node_0683       	node_0789       	72.727997   	76          	128         	0           	OPEN  	;
+ link_0692       	node_0778       	node_0689       	149.850006  	102         	132         	0           	OPEN  	;
+ link_0693       	node_0689       	node_0759       	185.389999  	102         	132         	0           	OPEN  	;
+ link_0696       	node_0785       	node_0682       	52.350998   	78          	117         	0           	OPEN  	;
+ link_0697       	node_0682       	node_0786       	45.939999   	78          	117         	0           	OPEN  	;
+ link_0708       	node_0449       	node_0447       	3.2885      	148         	117         	0           	OPEN  	;
+ link_0709       	node_0686       	node_0688       	8.7378      	148         	117         	0           	OPEN  	;
+ link_0710       	node_0113       	node_0457       	1.4583      	102         	132         	0           	OPEN  	;
+ link_0711       	node_0679       	node_0680       	553.140015  	247         	132         	0           	OPEN  	;
+ link_0712       	node_0687       	node_0681       	472.699982  	148         	117         	0           	OPEN  	;
+ link_0713       	node_0681       	node_0757       	66.343002   	148         	117         	0           	OPEN  	;
+ link_0714       	node_0680       	node_0684       	634.660034  	247         	132         	0           	OPEN  	;
+ link_0715       	node_0684       	node_0690       	283.289978  	247         	132         	0           	OPEN  	;
+ link_0716       	node_0690       	node_0731       	269.51001   	247         	132         	0           	OPEN  	;
+ link_0717       	node_0755       	node_0691       	247.809998  	148         	117         	0           	OPEN  	;
+ link_0718       	node_0691       	node_0668       	277.550018  	148         	117         	0           	OPEN  	;
+ link_0719       	node_0447       	node_0685       	19.581999   	148         	117         	0           	OPEN  	;
+ link_0720       	node_0685       	node_0686       	170.789993  	148         	117         	0           	OPEN  	;
+ link_0721       	node_0676       	node_0677       	1074.104614 	247         	132         	0           	OPEN  	;
+ link_0722       	node_0677       	node_0679       	681.200012  	247         	132         	0           	OPEN  	;
+ link_0723       	node_0678       	node_0747       	159.059998  	148         	128         	0           	OPEN  	;
+ link_0724       	node_0475       	node_0694       	6.5239      	244         	117         	0           	OPEN  	;
+ link_0725       	node_0732       	node_0694       	42.286999   	247         	133         	0           	OPEN  	;
+ link_0749       	node_0493       	node_0696       	11.152      	76          	99          	0           	OPEN  	;
+ link_0750       	node_0696       	node_0799       	54.575001   	76          	99          	0           	OPEN  	;
+ link_0751       	node_0696       	node_0695       	188.820007  	73          	133         	0           	OPEN  	;
+ link_0752       	node_0489       	node_0693       	10.131      	78          	117         	0           	OPEN  	;
+ link_0753       	node_0693       	node_0767       	210.87001   	78          	117         	0           	OPEN  	;
+ link_0754       	node_0693       	node_0692       	113.440002  	75          	130         	0           	OPEN  	;
+ link_0756       	node_0734       	node_0735       	2.280837    	247         	132         	0           	OPEN  	;
+ link_0757       	node_0735       	node_0676       	534.218994  	247         	132         	0           	OPEN  	;
+ link_0758       	node_0735       	node_0736       	10.081981   	253.999985  	99          	0           	OPEN  	;
+ link_0760       	node_0739       	node_0131       	0.567378    	203         	99          	0           	OPEN  	;
+ link_0761       	node_0742       	reservoir_1     	1.187047    	244         	117         	0           	OPEN  	;
+ link_0763       	reservoir_1     	node_0475       	515.049194  	244         	117         	0           	OPEN  	;
+ link_0766       	node_1062       	node_0667       	3.614486    	203         	99          	0           	OPEN  	;
+ link_0767       	node_1062       	node_1063       	37.031353   	75.999992   	99          	0           	OPEN  	;
+ link_0768       	node_1064       	node_0683       	54.346081   	76          	128         	0           	OPEN  	;
+ link_0769       	node_1065       	node_0504       	145.174286  	51          	99          	0           	OPEN  	;
+ link_0770       	node_1066       	node_0746       	189.471817  	148         	117         	0           	OPEN  	;
+ link_0792       	node_1094       	node_1095       	61.489017   	109.5       	132         	0           	OPEN  	;
+ link_0793       	node_1096       	node_1097       	62.265022   	50.899998   	132         	0           	OPEN  	;
+ link_0794       	node_1096       	node_1098       	74.638283   	109.5       	132         	0           	OPEN  	;
+ link_0795       	node_1099       	node_1100       	56.15646    	109.5       	132         	0           	OPEN  	;
+ link_0796       	node_1099       	node_1101       	4.752687    	50.899998   	132         	0           	OPEN  	;
+ link_0797       	node_1102       	node_1099       	13.179434   	109.5       	132         	0           	OPEN  	;
+ link_0798       	node_1102       	node_1103       	11.590317   	50.899998   	132         	0           	OPEN  	;
+ link_0799       	node_1104       	node_1102       	44.367012   	109.5       	132         	0           	OPEN  	;
+ link_0800       	node_1104       	node_1105       	8.506119    	50.899998   	132         	0           	OPEN  	;
+ link_0801       	node_1098       	node_1106       	24.296556   	109.5       	132         	0           	OPEN  	;
+ link_0802       	node_1107       	node_1108       	1.068892    	109.5       	132         	0           	OPEN  	;
+ link_0803       	node_1107       	node_1109       	1.092057    	109.5       	132         	0           	OPEN  	;
+ link_0804       	node_1116       	node_1096       	33.760002   	109.5       	132         	0           	OPEN  	;
+ link_0805       	node_1117       	node_1110       	20.83597    	109.5       	132         	0           	OPEN  	;
+ link_0806       	node_1106       	node_1104       	18.611012   	109.5       	132         	0           	OPEN  	;
+ link_0807       	node_1100       	node_1094       	11.521616   	109.5       	132         	0           	OPEN  	;
+ link_0808       	node_1098       	node_1111       	81.590828   	50.899998   	132         	0           	OPEN  	;
+ link_0809       	node_1110       	node_1112       	10.918934   	109.5       	132         	0           	OPEN  	;
+ link_0810       	node_1112       	node_1113       	4.087732    	109.5       	132         	0           	OPEN  	;
+ link_0811       	node_1112       	node_1114       	9.453372    	50.899998   	132         	0           	OPEN  	;
+ link_0812       	node_1100       	node_1115       	11.559883   	50.899998   	132         	0           	OPEN  	;
+ link_0813       	node_0069       	node_1107       	25.751614   	109.5       	132         	0           	OPEN  	;
+ link_0814       	node_0745       	node_1120       	464.783722  	148         	128         	0           	OPEN  	;
+ link_0815       	node_0066       	node_0404       	234.65625   	147.999985  	117         	0           	OPEN  	;
+ link_0816       	node_1120       	node_0678       	463.556335  	148         	128         	0           	OPEN  	;
+ link_0817       	node_0404       	node_1122       	16.679539   	148         	128         	0           	OPEN  	;
+ link_0818       	node_1122       	node_1118       	2.95734     	148         	128         	0           	OPEN  	;
+ link_0819       	node_1119       	node_1121       	12.039965   	148         	128         	0           	OPEN  	;
+ link_0820       	node_1123       	node_1124       	19.195126   	146         	132         	0           	OPEN  	;
+ link_0821       	node_1124       	node_0402       	73.677063   	146         	132         	0           	OPEN  	;
+ link_0822       	node_1124       	node_1126       	2.217268    	78.699997   	132         	0           	OPEN  	;
+ link_0823       	node_1127       	node_1125       	110.580521  	78.699997   	132         	0           	OPEN  	;
+ link_0824       	node_1129       	node_1123       	4.792338    	158         	132         	0           	OPEN  	;
+ link_0825       	node_1121       	node_1130       	282.766998  	158         	132         	0           	OPEN  	;
+ link_0826       	node_1130       	node_1131       	12.863589   	158         	132         	0           	OPEN  	;
+ link_0827       	node_1130       	node_1128       	2.263018    	158         	132         	0           	OPEN  	;
+ link_0828       	node_1131       	node_0403       	2.136088    	158         	132         	0           	OPEN  	;
+ link_0834       	node_1135       	node_0807       	7.258       	76          	99          	0           	OPEN  	;
+ link_0835       	node_1113       	node_1141       	105.379936  	109.5       	132         	0           	OPEN  	;
+ link_0836       	node_1139       	node_1138       	4.413777    	109.5       	132         	0           	OPEN  	;
+ link_0837       	node_1139       	node_1140       	64.678284   	50.899998   	132         	0           	OPEN  	;
+ link_0838       	node_1141       	node_1139       	39.137199   	109.5       	132         	0           	OPEN  	;
+ link_0839       	node_1141       	node_1142       	93.739975   	50.899998   	132         	0           	OPEN  	;
+ link_0840       	node_1105       	node_1143       	78.994377   	50.899998   	132         	0           	OPEN  	;
+ link_0841       	node_1103       	node_1144       	53.23888    	50.899998   	132         	0           	OPEN  	;
+ link_0843       	node_1108       	node_1116       	1           	109.5       	132         	0           	OPEN  	;
+ link_0844       	node_1109       	node_1117       	1           	109.5       	132         	0           	OPEN  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+ link_0846       	node_0686       	node_0687       	100         	TCV 	0.2         	0.2         	;	
+ link_0848       	node_0158       	node_0497       	101         	TCV 	0.2         	0.2         	;	
+ link_0849       	node_0732       	node_0731       	247         	TCV 	0.2         	0.2         	;	
+ link_0850       	node_0691       	node_0690       	148         	TCV 	0.2         	0.2         	;	
+ link_0851       	node_0684       	node_0685       	148         	TCV 	0.2         	0.2         	;	
+ link_0852       	node_0681       	node_0680       	148         	TCV 	0.2         	0.2         	;	
+ link_0853       	node_0677       	node_0678       	148         	TCV 	0.2         	0.2         	;	
+ link_0855       	node_0066       	node_0745       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0856       	node_0096       	node_0746       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0857       	node_0095       	node_0747       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0858       	node_0092       	node_0748       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0859       	node_0091       	node_0749       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0860       	node_0090       	node_0750       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0861       	node_0099       	node_0751       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0862       	node_0098       	node_0752       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0863       	node_0097       	node_0753       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0864       	node_0115       	node_0754       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0865       	node_0400       	node_0755       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0866       	node_0399       	node_0756       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0867       	node_0094       	node_0757       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0868       	node_0093       	node_0758       	152.399994  	TCV 	0.2         	0.2         	;	
+ link_0869       	node_0112       	node_0759       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0870       	node_0113       	node_0760       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0871       	node_0080       	node_0761       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0872       	node_0079       	node_0762       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0873       	node_0078       	node_0763       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0874       	node_0077       	node_0764       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0875       	node_0076       	node_0765       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0876       	node_0075       	node_0766       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0877       	node_0074       	node_0767       	9990        	TCV 	0.2         	0.2         	;	
+ link_0878       	node_0073       	node_0768       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0879       	node_0089       	node_0769       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0880       	node_0088       	node_0770       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0881       	node_0087       	node_0771       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0882       	node_0086       	node_0772       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0883       	node_0085       	node_0773       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0884       	node_0084       	node_0774       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0885       	node_0083       	node_0775       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0886       	node_0082       	node_0776       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0887       	node_0081       	node_0777       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0888       	node_0111       	node_0778       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0889       	node_0110       	node_0779       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0890       	node_0109       	node_0780       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0891       	node_0108       	node_0781       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0892       	node_0107       	node_0782       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0893       	node_0106       	node_0783       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0894       	node_0105       	node_0784       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0895       	node_0104       	node_0785       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0896       	node_0103       	node_0786       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0897       	node_0102       	node_0787       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0898       	node_0101       	node_0788       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0899       	node_0100       	node_0789       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0900       	node_0116       	node_0790       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0901       	node_0114       	node_0791       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0902       	node_0160       	node_0792       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0903       	node_0159       	node_0793       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0904       	node_0158       	node_0794       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0905       	node_0157       	node_0795       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0906       	node_0156       	node_0796       	101.599998  	TCV 	0.2         	0.2         	;	
+ link_0907       	node_0155       	node_0797       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0908       	node_0154       	node_0798       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0909       	node_0153       	node_0799       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0910       	node_0151       	node_0800       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0911       	node_0150       	node_0801       	50.799999   	TCV 	0.2         	0.2         	;	
+ link_0912       	node_0164       	node_0802       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0913       	node_0163       	node_0803       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0914       	node_0162       	node_0804       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0915       	node_0161       	node_0805       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0916       	node_0165       	node_0806       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0917       	node_0169       	node_0807       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0918       	node_0168       	node_0808       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0919       	node_0167       	node_0809       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0921       	node_0171       	node_0811       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_0937       	node_0135       	node_0827       	76.199997   	TCV 	0.2         	0.2         	;	
+ link_1179       	node_1118       	node_1119       	150         	TCV 	0.2         	0.2         	;	
+ link_1180       	node_1126       	node_1127       	80          	TCV 	0.2         	0.2         	;	
+ link_1181       	node_1128       	node_1129       	150         	TCV 	0.2         	0.2         	;	
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+;								
+ DEM_PATT_01     	0.00193     	0.00173     	0.00177     	0.00164     	0.00167     	0.00167     
+ DEM_PATT_01     	0.0017      	0.00166     	0.00164     	0.00153     	0.00144     	0.00135     
+ DEM_PATT_01     	0.0012      	0.00127     	0.00131     	0.00133     	0.0014      	0.00156     
+ DEM_PATT_01     	0.0018      	0.00197     	0.00212     	0.00288     	0.00332     	0.0046      
+ DEM_PATT_01     	0.00497     	0.00577     	0.00673     	0.00787     	0.00903     	0.00962     
+ DEM_PATT_01     	0.01005     	0.0101      	0.0099      	0.0104      	0.00983     	0.00918     
+ DEM_PATT_01     	0.00872     	0.0088      	0.00863     	0.00863     	0.00825     	0.00882     
+ DEM_PATT_01     	0.00812     	0.00805     	0.0079      	0.00815     	0.0077      	0.00755     
+ DEM_PATT_01     	0.00728     	0.00717     	0.00725     	0.00755     	0.00715     	0.0069      
+ DEM_PATT_01     	0.00687     	0.00652     	0.00637     	0.00627     	0.00613     	0.00608     
+ DEM_PATT_01     	0.00615     	0.00625     	0.00635     	0.00653     	0.0075      	0.00857     
+ DEM_PATT_01     	0.00908     	0.00858     	0.00807     	0.00803     	0.00795     	0.00838     
+ DEM_PATT_01     	0.00872     	0.00903     	0.00927     	0.00928     	0.0085      	0.00838     
+ DEM_PATT_01     	0.00837     	0.0081      	0.00753     	0.00733     	0.00658     	0.0062      
+ DEM_PATT_01     	0.00643     	0.00632     	0.0059      	0.00543     	0.00517     	0.006       
+ DEM_PATT_01     	0.0055      	0.0049      	0.0047      	0.00412     	0.0034      	0.00292     
+ DEM_PATT_01     	0.0019      
+;								
+ DEM_PATT_02     	0.00193     	0.00173     	0.00177     	0.00163     	0.00167     	0.00168     
+ DEM_PATT_02     	0.0017      	0.00166     	0.00163     	0.00153     	0.00144     	0.00135     
+ DEM_PATT_02     	0.0012      	0.00126     	0.00131     	0.00133     	0.0014      	0.00156     
+ DEM_PATT_02     	0.00179     	0.00196     	0.00212     	0.00289     	0.00331     	0.0046      
+ DEM_PATT_02     	0.00497     	0.00575     	0.00675     	0.00785     	0.00905     	0.0096      
+ DEM_PATT_02     	0.01005     	0.0101      	0.0099      	0.0104      	0.00985     	0.0092      
+ DEM_PATT_02     	0.0087      	0.0088      	0.00865     	0.00865     	0.00825     	0.0088      
+ DEM_PATT_02     	0.0081      	0.00805     	0.0079      	0.00815     	0.0077      	0.00755     
+ DEM_PATT_02     	0.0073      	0.00715     	0.00725     	0.00755     	0.00715     	0.0069      
+ DEM_PATT_02     	0.00685     	0.0065      	0.00635     	0.00625     	0.00615     	0.0061      
+ DEM_PATT_02     	0.00615     	0.00625     	0.00635     	0.00655     	0.0075      	0.00855     
+ DEM_PATT_02     	0.0091      	0.0086      	0.00805     	0.00805     	0.00795     	0.0084      
+ DEM_PATT_02     	0.0087      	0.00905     	0.00925     	0.0093      	0.0085      	0.0084      
+ DEM_PATT_02     	0.00835     	0.0081      	0.00755     	0.00735     	0.0066      	0.0062      
+ DEM_PATT_02     	0.00645     	0.0063      	0.0059      	0.00545     	0.00515     	0.006       
+ DEM_PATT_02     	0.0055      	0.0049      	0.0047      	0.00412     	0.0034      	0.00292     
+ DEM_PATT_02     	0.00189     
+;								
+ DEM_PATT_03     	0.00393     	0.00329     	0.0031      	0.0026      	0.00234     	0.0022      
+ DEM_PATT_03     	0.0021      	0.0019      	0.00175     	0.00166     	0.00158     	0.0015      
+ DEM_PATT_03     	0.00137     	0.00134     	0.00128     	0.00121     	0.00119     	0.00119     
+ DEM_PATT_03     	0.00126     	0.00128     	0.0013      	0.00114     	0.0009      	0.00091     
+ DEM_PATT_03     	0.00072     	0.00265     	0.00405     	0.00539     	0.00666     	0.00703     
+ DEM_PATT_03     	0.00728     	0.00727     	0.00707     	0.00705     	0.00627     	0.00549     
+ DEM_PATT_03     	0.00484     	0.00511     	0.00524     	0.0055      	0.00555     	0.00549     
+ DEM_PATT_03     	0.00468     	0.00428     	0.00388     	0.00404     	0.00387     	0.00384     
+ DEM_PATT_03     	0.00376     	0.00345     	0.00327     	0.00322     	0.0029      	0.00311     
+ DEM_PATT_03     	0.00347     	0.00372     	0.00415     	0.00401     	0.00384     	0.00374     
+ DEM_PATT_03     	0.0037      	0.00353     	0.0034      	0.00333     	0.00366     	0.00423     
+ DEM_PATT_03     	0.00454     	0.00435     	0.00414     	0.00433     	0.00448     	0.00493     
+ DEM_PATT_03     	0.00534     	0.00587     	0.00637     	0.00672     	0.00645     	0.00645     
+ DEM_PATT_03     	0.00652     	0.0064      	0.00603     	0.00606     	0.00563     	0.00551     
+ DEM_PATT_03     	0.00597     	0.00578     	0.00531     	0.00482     	0.0045      	0.00493     
+ DEM_PATT_03     	0.00426     	0.00356     	0.00319     	0.00307     	0.00294     	0.00326     
+ DEM_PATT_03     	0.00386     
+;								
+ DEM_PATT_04     	0.00393     	0.00328     	0.0031      	0.0026      	0.00234     	0.0022      
+ DEM_PATT_04     	0.00209     	0.00191     	0.00175     	0.00166     	0.00158     	0.00151     
+ DEM_PATT_04     	0.00137     	0.00133     	0.00128     	0.0012      	0.00119     	0.00119     
+ DEM_PATT_04     	0.00126     	0.00128     	0.0013      	0.00114     	0.0009      	0.0009      
+ DEM_PATT_04     	0.00072     	0.00265     	0.00406     	0.0054      	0.00665     	0.00705     
+ DEM_PATT_04     	0.0073      	0.00725     	0.00705     	0.00705     	0.00625     	0.0055      
+ DEM_PATT_04     	0.00484     	0.0051      	0.00525     	0.0055      	0.00555     	0.0055      
+ DEM_PATT_04     	0.00468     	0.00428     	0.00388     	0.00404     	0.00387     	0.00384     
+ DEM_PATT_04     	0.00376     	0.00345     	0.00327     	0.00323     	0.0029      	0.00311     
+ DEM_PATT_04     	0.00347     	0.00372     	0.00415     	0.00401     	0.00384     	0.00373     
+ DEM_PATT_04     	0.0037      	0.00353     	0.0034      	0.00333     	0.00366     	0.00423     
+ DEM_PATT_04     	0.00454     	0.00435     	0.00414     	0.00432     	0.00449     	0.00494     
+ DEM_PATT_04     	0.00535     	0.00585     	0.00635     	0.0067      	0.00645     	0.00645     
+ DEM_PATT_04     	0.0065      	0.0064      	0.00605     	0.00605     	0.00565     	0.0055      
+ DEM_PATT_04     	0.00595     	0.0058      	0.0053      	0.00482     	0.0045      	0.00494     
+ DEM_PATT_04     	0.00426     	0.00357     	0.00319     	0.00308     	0.00293     	0.00327     
+ DEM_PATT_04     	0.00387     
+;								
+ DEM_PATT_05     	0.00462     	0.0038      	0.00356     	0.00322     	0.00302     	0.00272     
+ DEM_PATT_05     	0.00252     	0.00228     	0.00202     	0.00216     	0.00214     	0.00248     
+ DEM_PATT_05     	0.00258     	0.0025      	0.00232     	0.00218     	0.00234     	0.00218     
+ DEM_PATT_05     	0.00234     	0.00234     	0.00262     	0.00322     	0.00338     	0.00488     
+ DEM_PATT_05     	0.00558     	0.00554     	0.00562     	0.0066      	0.0077      	0.0092      
+ DEM_PATT_05     	0.00966     	0.00956     	0.00862     	0.009       	0.00804     	0.00694     
+ DEM_PATT_05     	0.00636     	0.0065      	0.00644     	0.0065      	0.00644     	0.0067      
+ DEM_PATT_05     	0.00566     	0.00526     	0.00494     	0.00526     	0.00528     	0.00504     
+ DEM_PATT_05     	0.00528     	0.00462     	0.00416     	0.00396     	0.00342     	0.0036      
+ DEM_PATT_05     	0.00382     	0.00386     	0.00418     	0.00412     	0.00388     	0.00388     
+ DEM_PATT_05     	0.00372     	0.00342     	0.00322     	0.00316     	0.00352     	0.0042      
+ DEM_PATT_05     	0.0046      	0.00454     	0.00482     	0.00504     	0.00512     	0.0055      
+ DEM_PATT_05     	0.00622     	0.00664     	0.00688     	0.00728     	0.0066      	0.00656     
+ DEM_PATT_05     	0.00624     	0.00574     	0.00514     	0.00568     	0.00488     	0.0049      
+ DEM_PATT_05     	0.0054      	0.00588     	0.00478     	0.0042      	0.00406     	0.00568     
+ DEM_PATT_05     	0.00452     	0.00392     	0.00328     	0.00346     	0.00322     	0.00368     
+ DEM_PATT_05     	0.00454     
+;								
+ DEM_PATT_06     	0.0052      	0.0043      	0.00398     	0.00325     	0.00282     	0.00267     
+ DEM_PATT_06     	0.00255     	0.00233     	0.00216     	0.00229     	0.00248     	0.0027      
+ DEM_PATT_06     	0.0029      	0.0029      	0.0028      	0.0027      	0.0027      	0.00267     
+ DEM_PATT_06     	0.00278     	0.00278     	0.00278     	0.00355     	0.00392     	0.00532     
+ DEM_PATT_06     	0.00567     	0.00558     	0.00595     	0.0066      	0.0073      	0.00805     
+ DEM_PATT_06     	0.00868     	0.00897     	0.00903     	0.00928     	0.00855     	0.0078      
+ DEM_PATT_06     	0.0072      	0.0075      	0.00758     	0.0078      	0.00775     	0.00777     
+ DEM_PATT_06     	0.00675     	0.0063      	0.00583     	0.00622     	0.00615     	0.0063      
+ DEM_PATT_06     	0.0064      	0.00573     	0.00528     	0.00505     	0.00443     	0.0046      
+ DEM_PATT_06     	0.00497     	0.00517     	0.0056      	0.0055      	0.00538     	0.0053      
+ DEM_PATT_06     	0.00535     	0.00515     	0.005       	0.00495     	0.0055      	0.00657     
+ DEM_PATT_06     	0.00727     	0.0072      	0.00705     	0.00732     	0.00752     	0.00825     
+ DEM_PATT_06     	0.00888     	0.00967     	0.01045     	0.01095     	0.01045     	0.01005     
+ DEM_PATT_06     	0.00972     	0.00915     	0.00822     	0.00838     	0.0079      	0.00785     
+ DEM_PATT_06     	0.00865     	0.00812     	0.0072      	0.00628     	0.00558     	0.0062      
+ DEM_PATT_06     	0.00542     	0.00462     	0.00423     	0.00407     	0.0039      	0.00432     
+ DEM_PATT_06     	0.0051      
+;								
+ DEM_PATT_07     	0.00822     	0.00772     	0.0083      	0.00812     	0.00874     	0.00862     
+ DEM_PATT_07     	0.0086      	0.0082      	0.00798     	0.00836     	0.00894     	0.00966     
+ DEM_PATT_07     	0.01022     	0.01016     	0.0099      	0.00952     	0.00956     	0.00906     
+ DEM_PATT_07     	0.00906     	0.00876     	0.0085      	0.00822     	0.00728     	0.00826     
+ DEM_PATT_07     	0.00754     	0.00512     	0.00406     	0.00346     	0.00302     	0.0031      
+ DEM_PATT_07     	0.00312     	0.00302     	0.00286     	0.00306     	0.00296     	0.00282     
+ DEM_PATT_07     	0.00274     	0.00292     	0.00306     	0.00326     	0.00336     	0.00346     
+ DEM_PATT_07     	0.0031      	0.00298     	0.00284     	0.00314     	0.00318     	0.00336     
+ DEM_PATT_07     	0.00352     	0.00314     	0.00292     	0.0028      	0.00248     	0.00258     
+ DEM_PATT_07     	0.00282     	0.00296     	0.00322     	0.00314     	0.00304     	0.00298     
+ DEM_PATT_07     	0.003       	0.00276     	0.00258     	0.00244     	0.0026      	0.003       
+ DEM_PATT_07     	0.00322     	0.00308     	0.00292     	0.00288     	0.00282     	0.00294     
+ DEM_PATT_07     	0.00304     	0.00308     	0.0031      	0.00304     	0.00274     	0.00272     
+ DEM_PATT_07     	0.00276     	0.0027      	0.00254     	0.00264     	0.00256     	0.00262     
+ DEM_PATT_07     	0.00296     	0.00298     	0.00284     	0.00268     	0.00262     	0.0033      
+ DEM_PATT_07     	0.00326     	0.00312     	0.0032      	0.00356     	0.00398     	0.00538     
+ DEM_PATT_07     	0.00808     
+;								
+ DEM_PATT_08     	0.0082      	0.0077      	0.0083      	0.0081      	0.00875     	0.0086      
+ DEM_PATT_08     	0.0086      	0.0082      	0.00795     	0.00835     	0.00895     	0.00965     
+ DEM_PATT_08     	0.0102      	0.01015     	0.0099      	0.0095      	0.00955     	0.00905     
+ DEM_PATT_08     	0.00905     	0.00875     	0.0085      	0.0082      	0.0073      	0.00825     
+ DEM_PATT_08     	0.00755     	0.0051      	0.00406     	0.00346     	0.00302     	0.0031      
+ DEM_PATT_08     	0.00311     	0.00302     	0.00286     	0.00307     	0.00296     	0.00282     
+ DEM_PATT_08     	0.00273     	0.00293     	0.00305     	0.00327     	0.00335     	0.00346     
+ DEM_PATT_08     	0.0031      	0.00298     	0.00284     	0.00313     	0.00317     	0.00335     
+ DEM_PATT_08     	0.00351     	0.00315     	0.00292     	0.00281     	0.00247     	0.00259     
+ DEM_PATT_08     	0.00282     	0.00296     	0.00322     	0.00314     	0.00304     	0.00299     
+ DEM_PATT_08     	0.003       	0.00277     	0.00258     	0.00245     	0.00261     	0.003       
+ DEM_PATT_08     	0.00323     	0.00308     	0.00293     	0.00288     	0.00282     	0.00295     
+ DEM_PATT_08     	0.00303     	0.00308     	0.0031      	0.00304     	0.00273     	0.00273     
+ DEM_PATT_08     	0.00275     	0.00269     	0.00253     	0.00265     	0.00256     	0.00261     
+ DEM_PATT_08     	0.00296     	0.00298     	0.00284     	0.00268     	0.00261     	0.00329     
+ DEM_PATT_08     	0.00326     	0.00313     	0.0032      	0.00355     	0.00399     	0.0054      
+ DEM_PATT_08     	0.0081      
+;								
+ DEM_PATT_09     	0.01002     	0.00942     	0.01013     	0.0099      	0.01065     	0.0105      
+ DEM_PATT_09     	0.0105      	0.01        	0.00972     	0.0102      	0.0109      	0.01177     
+ DEM_PATT_09     	0.01245     	0.01237     	0.01208     	0.0116      	0.01165     	0.01105     
+ DEM_PATT_09     	0.01105     	0.01068     	0.01037     	0.01        	0.00888     	0.01007     
+ DEM_PATT_09     	0.00917     	0.00625     	0.00495     	0.00423     	0.00367     	0.00377     
+ DEM_PATT_09     	0.0038      	0.00367     	0.00348     	0.00375     	0.0036      	0.00345     
+ DEM_PATT_09     	0.00332     	0.00358     	0.00373     	0.00398     	0.00407     	0.00423     
+ DEM_PATT_09     	0.00377     	0.00362     	0.00348     	0.00382     	0.00387     	0.0041      
+ DEM_PATT_09     	0.00427     	0.00385     	0.00355     	0.00342     	0.00302     	0.00315     
+ DEM_PATT_09     	0.00342     	0.0036      	0.00392     	0.00382     	0.00373     	0.00365     
+ DEM_PATT_09     	0.00365     	0.00337     	0.00315     	0.00297     	0.00317     	0.00367     
+ DEM_PATT_09     	0.00392     	0.00375     	0.00358     	0.00352     	0.00345     	0.0036      
+ DEM_PATT_09     	0.0037      	0.00375     	0.00377     	0.0037      	0.00332     	0.00332     
+ DEM_PATT_09     	0.00335     	0.00327     	0.00308     	0.00323     	0.00313     	0.0032      
+ DEM_PATT_09     	0.0036      	0.00362     	0.00348     	0.00327     	0.0032      	0.00402     
+ DEM_PATT_09     	0.00398     	0.0038      	0.0039      	0.00432     	0.00485     	0.00655     
+ DEM_PATT_09     	0.00985     
+;								
+ DEM_PATT_10     	0.01        	0.00942     	0.0101      	0.0099      	0.0107      	0.0105      
+ DEM_PATT_10     	0.0105      	0.01        	0.00972     	0.0102      	0.0109      	0.0118      
+ DEM_PATT_10     	0.0124      	0.0124      	0.0121      	0.0116      	0.0117      	0.0111      
+ DEM_PATT_10     	0.011       	0.0107      	0.0104      	0.01        	0.00887     	0.0101      
+ DEM_PATT_10     	0.00918     	0.00624     	0.00494     	0.00422     	0.00368     	0.00377     
+ DEM_PATT_10     	0.0038      	0.00368     	0.00349     	0.00374     	0.0036      	0.00344     
+ DEM_PATT_10     	0.00333     	0.00357     	0.00373     	0.00398     	0.00409     	0.00422     
+ DEM_PATT_10     	0.00378     	0.00363     	0.00347     	0.00382     	0.00387     	0.00409     
+ DEM_PATT_10     	0.00428     	0.00384     	0.00356     	0.00342     	0.00301     	0.00315     
+ DEM_PATT_10     	0.00344     	0.0036      	0.00393     	0.00383     	0.00371     	0.00364     
+ DEM_PATT_10     	0.00365     	0.00337     	0.00314     	0.00298     	0.00318     	0.00367     
+ DEM_PATT_10     	0.00393     	0.00376     	0.00357     	0.00351     	0.00344     	0.00359     
+ DEM_PATT_10     	0.0037      	0.00375     	0.00377     	0.00371     	0.00333     	0.00333     
+ DEM_PATT_10     	0.00335     	0.00328     	0.00309     	0.00322     	0.00312     	0.00319     
+ DEM_PATT_10     	0.00361     	0.00363     	0.00346     	0.00328     	0.00319     	0.00402     
+ DEM_PATT_10     	0.00397     	0.00381     	0.00391     	0.00433     	0.00486     	0.00655     
+ DEM_PATT_10     	0.00984     
+;								
+ DEM_PATT_11     	0.23594     	0.19718     	0.18592     	0.15615     	0.14046     	0.13217     
+ DEM_PATT_11     	0.12584     	0.11423     	0.10514     	0.0995      	0.0948      	0.0902      
+ DEM_PATT_11     	0.082       	0.0802      	0.0767      	0.0723      	0.0713      	0.0716      
+ DEM_PATT_11     	0.0754      	0.0767      	0.078       	0.0683      	0.0543      	0.0544      
+ DEM_PATT_11     	0.0433      	0.15895     	0.2432      	0.32316     	0.39961     	0.42177     
+ DEM_PATT_11     	0.43695     	0.43599     	0.4243      	0.42278     	0.37647     	0.32959     
+ DEM_PATT_11     	0.29046     	0.30632     	0.31444     	0.33024     	0.33327     	0.32937     
+ DEM_PATT_11     	0.28067     	0.25704     	0.2328      	0.24255     	0.23197     	0.23047     
+ DEM_PATT_11     	0.22582     	0.20709     	0.19634     	0.19337     	0.17393     	0.18655     
+ DEM_PATT_11     	0.20811     	0.2231      	0.24877     	0.24046     	0.23069     	0.22414     
+ DEM_PATT_11     	0.22216     	0.21203     	0.20382     	0.19994     	0.21949     	0.25367     
+ DEM_PATT_11     	0.27247     	0.26101     	0.24848     	0.25956     	0.26899     	0.29597     
+ DEM_PATT_11     	0.32035     	0.35242     	0.38232     	0.40314     	0.3867      	0.38709     
+ DEM_PATT_11     	0.39131     	0.38424     	0.36206     	0.36371     	0.33775     	0.33056     
+ DEM_PATT_11     	0.35804     	0.34693     	0.31846     	0.28927     	0.27012     	0.29596     
+ DEM_PATT_11     	0.25542     	0.21379     	0.19134     	0.18445     	0.17623     	0.19589     
+ DEM_PATT_11     	0.23175     
+;								
+ DEM_PATT_12     	1.7858      	1.59928     	1.63378     	1.51457     	1.54244     	1.54833     
+ DEM_PATT_12     	1.57722     	1.53111     	1.51453     	1.4187      	1.33249     	1.24593     
+ DEM_PATT_12     	1.10875     	1.17072     	1.20945     	1.22644     	1.2989      	1.44673     
+ DEM_PATT_12     	1.65991     	1.81327     	1.96227     	2.67461     	3.06286     	4.25758     
+ DEM_PATT_12     	4.59948     	5.33508     	6.22425     	7.28206     	8.35953     	8.89887     
+ DEM_PATT_12     	9.29325     	9.3426      	9.15646     	9.62579     	9.09236     	8.49662     
+ DEM_PATT_12     	8.05584     	8.14694     	7.98962     	7.9886      	7.63895     	8.15099     
+ DEM_PATT_12     	7.50738     	7.44083     	7.30745     	7.53668     	7.12423     	6.98559     
+ DEM_PATT_12     	6.73896     	6.635       	6.70238     	6.98638     	6.61728     	6.37985     
+ DEM_PATT_12     	6.35066     	6.02372     	5.88452     	5.80165     	5.67702     	5.62504     
+ DEM_PATT_12     	5.68705     	5.77824     	5.86873     	6.04626     	6.93638     	7.91777     
+ DEM_PATT_12     	8.39872     	7.94491     	7.46475     	7.431       	7.35939     	7.76042     
+ DEM_PATT_12     	8.07031     	8.35001     	8.56711     	8.58621     	7.86104     	7.76199     
+ DEM_PATT_12     	7.73791     	7.49329     	6.96123     	6.78335     	6.09031     	5.73716     
+ DEM_PATT_12     	5.94873     	5.84766     	5.45053     	5.03115     	4.78038     	5.54278     
+ DEM_PATT_12     	5.08105     	4.53606     	4.35121     	3.80847     	3.13941     	2.70009     
+ DEM_PATT_12     	1.75409     
+;								
+ DEM_PATT_13     	2.37175     	2.22802     	2.39653     	2.34245     	2.52269     	2.48349     
+ DEM_PATT_13     	2.48195     	2.36804     	2.29962     	2.41152     	2.57698     	2.78872     
+ DEM_PATT_13     	2.94509     	2.92973     	2.85484     	2.74509     	2.75879     	2.61545     
+ DEM_PATT_13     	2.61208     	2.52615     	2.45246     	2.36812     	2.09968     	2.38116     
+ DEM_PATT_13     	2.17231     	1.575       	1.33643     	1.22854     	1.16131     	1.18961     
+ DEM_PATT_13     	1.19718     	1.16133     	1.09963     	1.17931     	1.13689     	1.08473     
+ DEM_PATT_13     	1.05054     	1.12628     	1.17532     	1.25546     	1.28875     	1.33271     
+ DEM_PATT_13     	1.19091     	1.14605     	1.09387     	1.20458     	1.22116     	1.29116     
+ DEM_PATT_13     	1.35139     	1.21063     	1.12182     	1.08006     	0.95042     	0.99526     
+ DEM_PATT_13     	1.08427     	1.1357      	1.2384      	1.20895     	1.17147     	1.14977     
+ DEM_PATT_13     	1.15134     	1.06346     	0.9901      	0.94159     	1.00305     	1.15672     
+ DEM_PATT_13     	1.23972     	1.18503     	1.12537     	1.10838     	1.0863      	1.13374     
+ DEM_PATT_13     	1.16702     	1.18325     	1.19015     	1.16995     	1.05087     	1.04918     
+ DEM_PATT_13     	1.0577      	1.03591     	0.97344     	1.01725     	0.98447     	1.00573     
+ DEM_PATT_13     	1.13925     	1.14567     	1.09302     	1.03326     	1.00603     	1.16944     
+ DEM_PATT_13     	1.07475     	0.96173     	0.92489     	1.02471     	1.15049     	1.55102     
+ DEM_PATT_13     	2.32962     
+;								
+ DEM_PATT_14     	5.72        	4.99        	4.86        	4.49        	4.2         	4.38        
+ DEM_PATT_14     	4.13        	4.18        	4.01        	4.14        	3.92        	3.92        
+ DEM_PATT_14     	4           	3.87        	3.93        	3.77        	3.81        	3.99        
+ DEM_PATT_14     	4.01        	4.01        	4.42        	4.91        	5.27        	6.87        
+ DEM_PATT_14     	7.8         	10.01       	12.21       	13.89       	16.49       	18.27       
+ DEM_PATT_14     	19.9        	20.26       	20.18       	18.99       	18.41       	16.64       
+ DEM_PATT_14     	15.82       	15.1        	14.91       	15.11       	15.14       	13.48       
+ DEM_PATT_14     	13.66       	13.48       	12.69       	12.03       	11.2        	11.92       
+ DEM_PATT_14     	11.91       	11.83       	11.5        	10.88       	10.43       	10.38       
+ DEM_PATT_14     	10.37       	9.93        	9.68        	9.39        	8.81        	9.49        
+ DEM_PATT_14     	9.12        	9.34        	9.12        	10.3        	10.2        	10.34       
+ DEM_PATT_14     	10.33       	11.09       	11.53       	11.98       	12.04       	12.94       
+ DEM_PATT_14     	13.62       	14.72       	14.83       	16.44       	15.88       	15.89       
+ DEM_PATT_14     	14.9        	14.36       	14.32       	14.84       	13.53       	12.13       
+ DEM_PATT_14     	11.82       	13.42       	12.44       	10.98       	9.77        	12.64       
+ DEM_PATT_14     	10.99       	9.92        	9.44        	8.36        	6.77        	6.38        
+ DEM_PATT_14     	5.33        
+;								
+ RES_PATT        	1.9005      	1.89706     	1.89911     	1.89104     	1.89806     	1.9001      
+ RES_PATT        	1.89475     	1.89065     	1.89194     	1.88901     	1.88513     	1.886       
+ RES_PATT        	1.88741     	1.9002      	1.88917     	1.88985     	1.89503     	1.89213     
+ RES_PATT        	1.89396     	1.89504     	1.89161     	1.89068     	1.89206     	1.90341     
+ RES_PATT        	1.90629     	1.90864     	1.91976     	1.93283     	1.9552      	1.96764     
+ RES_PATT        	1.98194     	1.98017     	1.97837     	1.98174     	1.97538     	1.95839     
+ RES_PATT        	1.95363     	1.95456     	1.94466     	1.94798     	1.94091     	1.9421      
+ RES_PATT        	1.9418      	1.94347     	1.94334     	1.93432     	1.93648     	1.93632     
+ RES_PATT        	1.93034     	1.92744     	1.92538     	1.92529     	1.9258      	1.91905     
+ RES_PATT        	1.92108     	1.9157      	1.92494     	1.92926     	1.91554     	1.91875     
+ RES_PATT        	1.91672     	1.91996     	1.9156      	1.91606     	1.92149     	1.92638     
+ RES_PATT        	1.93575     	1.93823     	1.93819     	1.93701     	1.93239     	1.93282     
+ RES_PATT        	1.94287     	1.95186     	1.95302     	1.96152     	1.96157     	1.94801     
+ RES_PATT        	1.9464      	1.95072     	1.93981     	1.93915     	1.93715     	1.92453     
+ RES_PATT        	1.91765     	1.92503     	1.92628     	1.91628     	1.91511     	1.92224     
+ RES_PATT        	1.9219      	1.90037     	1.90512     	1.91197     	1.91508     	1.90566     
+ RES_PATT        	1.89536     
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+
+[CONTROLS]
+;								
+								
+								
+
+[RULES]
+; WARNING: Synergi does NOT export any rules to Epanet								
+								
+								
+								
+								
+								
+								
+								
+								
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0
+ Demand Charge      	0
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0
+ Global Wall           	0
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	24:00 
+ Hydraulic Timestep 	0:15 
+ Quality Timestep   	0:15 
+ Pattern Timestep   	0:15 
+ Pattern Start      	0:00 
+ Report Timestep    	1:00 
+ Report Start       	0:00 
+ Start ClockTime    	12:00:00 AM
+ Statistic          	NONE
+
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	H-W
+ Specific Gravity   	1
+ Viscosity          	1
+ Trials             	100
+ Accuracy           	0.005
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0.1
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1
+ Emitter Exponent   	0.5
+ Quality            	None mg/L
+ Diffusivity        	1
+ Tolerance          	0.01
+
+[COORDINATES]
+;Node            	X-Coord           	Y-Coord
+node_0066       	11309.700         	81184.160         
+node_0067       	46688.230         	75976.040         
+node_0068       	46367.470         	74016.220         
+node_0069       	36037.150         	73197.690         
+node_0070       	34336.170         	75524.170         
+node_0071       	41581.390         	68033.460         
+node_0072       	39201.960         	72632.200         
+node_0073       	47858.510         	61348.380         
+node_0074       	45290.510         	69789.300         
+node_0075       	46524.940         	66515.180         
+node_0076       	46874.850         	63346.930         
+node_0077       	46592.980         	65095.020         
+node_0078       	43949.160         	62419.950         
+node_0079       	43325.140         	74328.650         
+node_0080       	45121.380         	70081.080         
+node_0081       	43509.820         	74455.170         
+node_0082       	46497.720         	75712.660         
+node_0083       	43241.550         	74380.290         
+node_0084       	43224.060         	74741.790         
+node_0085       	42858.590         	75694.590         
+node_0086       	42804.160         	75849.510         
+node_0087       	44048.300         	76283.310         
+node_0088       	45300.230         	75201.400         
+node_0089       	42883.860         	75766.890         
+node_0090       	38389.370         	74320.900         
+node_0091       	36122.690         	73809.650         
+node_0092       	36146.020         	73977.480         
+node_0093       	40788.250         	53738.900         
+node_0094       	40819.350         	53635.610         
+node_0095       	32038.380         	76099.980         
+node_0096       	32201.680         	76053.500         
+node_0097       	32162.800         	76107.730         
+node_0098       	35813.600         	73990.390         
+node_0099       	34293.400         	75488.020         
+node_0100       	43731.430         	72854.270         
+node_0101       	41468.640         	70809.230         
+node_0102       	41363.660         	70623.320         
+node_0103       	40908.770         	71749.120         
+node_0104       	40008.710         	73987.810         
+node_0105       	40976.810         	69040.490         
+node_0106       	39563.540         	70757.590         
+node_0107       	41241.190         	69063.730         
+node_0108       	40420.830         	71175.890         
+node_0109       	41225.640         	69141.190         
+node_0110       	39546.040         	71010.640         
+node_0111       	47617.460         	61371.620         
+node_0112       	42059.610         	56850.340         
+node_0113       	40829.070         	53707.910         
+node_0114       	40070.920         	74137.570         
+node_0115       	38074.450         	94262.550         
+node_0116       	41985.740         	79286.300         
+node_0117       	64635.080         	40136.340         
+node_0121       	50129.080         	27434.930         
+node_0131       	60152.250         	28617.540         
+node_0135       	60121.150         	28682.090         
+node_0143       	49833.600         	67514.460         
+node_0144       	49831.650         	69585.310         
+node_0145       	51787.300         	72606.380         
+node_0146       	54079.250         	70902.190         
+node_0147       	53326.930         	73022.100         
+node_0148       	51701.760         	75418.300         
+node_0150       	52893.420         	74023.960         
+node_0151       	52574.610         	74196.960         
+node_0152       	52755.400         	74075.600         
+node_0153       	51505.420         	73688.290         
+node_0154       	51507.360         	75392.480         
+node_0155       	51204.100         	73200.270         
+node_0156       	51328.520         	72794.880         
+node_0157       	51849.500         	69368.420         
+node_0158       	51931.150         	69125.700         
+node_0159       	52807.890         	66148.520         
+node_0160       	51810.630         	69247.060         
+node_0161       	51571.520         	71560.630         
+node_0162       	51921.430         	71782.690         
+node_0163       	51973.920         	71521.900         
+node_0164       	53741.000         	71514.150         
+node_0165       	53729.340         	71731.050         
+node_0167       	50469.280         	64348.790         
+node_0168       	51069.970         	64857.470         
+node_0169       	50391.520         	64421.090         
+node_0170       	53768.220         	100000.000        
+node_0171       	51268.250         	95192.110         
+node_0399       	43624.520         	35816.460         
+node_0400       	44419.600         	35496.280         
+node_0402       	0.000             	82991.630         
+node_0403       	1030.890          	85111.550         
+node_0404       	6767.590          	81731.560         
+node_0409       	49693.630         	26750.670         
+node_0447       	43587.580         	35924.910         
+node_0448       	37526.240         	27114.750         
+node_0449       	43558.420         	35847.450         
+node_0450       	32085.040         	76087.070         
+node_0451       	34299.230         	75534.500         
+node_0452       	36140.180         	73923.260         
+node_0453       	38406.870         	74424.190         
+node_0454       	39623.800         	70801.490         
+node_0455       	39956.220         	74114.340         
+node_0456       	40358.630         	71320.490         
+node_0457       	40801.850         	53695.000         
+node_0458       	40922.380         	71718.140         
+node_0459       	41231.470         	69110.200         
+node_0460       	41342.280         	70693.040         
+node_0461       	42843.040         	75741.070         
+node_0462       	43214.340         	74393.200         
+node_0463       	43268.770         	74367.380         
+node_0464       	43875.290         	72934.310         
+node_0465       	43995.820         	76272.980         
+node_0466       	45265.240         	69773.810         
+node_0467       	45331.330         	75064.550         
+node_0468       	46355.810         	66422.230         
+node_0469       	46476.340         	75746.230         
+node_0470       	46612.420         	65097.600         
+node_0471       	46981.770         	63403.740         
+node_0472       	47749.650         	61480.070         
+node_0473       	42201.520         	78751.810         
+node_0474       	38169.700         	94316.770         
+node_0475       	50117.420         	27582.110         
+node_0476       	60115.320         	28625.280         
+node_0488       	49026.840         	61549.780         
+node_0489       	49026.840         	72454.040         
+node_0490       	50475.110         	64403.020         
+node_0491       	51033.030         	64937.510         
+node_0492       	51289.640         	73228.670         
+node_0493       	51423.770         	75382.150         
+node_0494       	51437.380         	71527.060         
+node_0495       	51509.310         	73564.350         
+node_0496       	51534.580         	63829.790         
+node_0497       	51880.610         	69283.210         
+node_0498       	51942.820         	71648.420         
+node_0499       	52597.940         	74023.960         
+node_0500       	52611.550         	73933.590         
+node_0501       	52901.200         	66207.910         
+node_0502       	53731.280         	71607.110         
+node_0504       	57088.540         	75537.080         
+node_0507       	51266.310         	95189.530         
+node_0655       	41771.900         	69634.370         
+node_0665       	49028.790         	91280.210         
+node_0666       	44349.620         	35426.560         
+node_0667       	49779.160         	26828.130         
+node_0668       	49664.470         	27107.000         
+node_0669       	49932.740         	27109.580         
+node_0676       	9595.500          	81184.160         
+node_0677       	28982.440         	76820.390         
+node_0678       	29020.350         	76990.810         
+node_0679       	33474.010         	61278.660         
+node_0680       	41106.090         	51972.730         
+node_0681       	41305.350         	52047.610         
+node_0682       	40488.870         	72794.880         
+node_0683       	42555.330         	71816.260         
+node_0684       	43336.810         	36665.980         
+node_0685       	43753.790         	36379.360         
+node_0686       	44678.150         	40503.000         
+node_0687       	44632.470         	40673.410         
+node_0688       	44670.380         	40694.070         
+node_0689       	45129.160         	59360.150         
+node_0690       	46986.630         	33329.890         
+node_0691       	47215.050         	33489.980         
+node_0692       	48329.920         	70780.830         
+node_0693       	48838.280         	72379.160         
+node_0694       	49991.060         	27548.540         
+node_0695       	52662.090         	78524.580         
+node_0696       	51444.180         	75095.540         
+node_0731       	49419.530         	27076.020         
+node_0732       	49433.130         	27039.870         
+node_0734       	187.400           	85741.320         
+node_0735       	228.030           	85717.830         
+node_0736       	88.840            	85842.540         
+node_0737       	52921.610         	66139.230         
+node_0739       	60163.140         	28615.210         
+node_0742       	60084.600         	29065.280         
+node_0745       	11319.420         	81182.610         
+node_0746       	32211.200         	76050.660         
+node_0747       	32029.050         	76102.820         
+node_0748       	36147.960         	73990.140         
+node_0749       	36120.940         	73796.990         
+node_0750       	38387.620         	74308.250         
+node_0751       	34291.850         	75475.370         
+node_0752       	35804.070         	73992.460         
+node_0753       	32172.320         	76105.140         
+node_0754       	38065.500         	94257.640         
+node_0755       	44427.380         	35504.290         
+node_0756       	43633.650         	35811.560         
+node_0757       	40823.040         	53623.730         
+node_0758       	40784.750         	53751.030         
+node_0759       	42067.970         	56857.310         
+node_0760       	40838.210         	53712.560         
+node_0761       	45115.160         	70090.890         
+node_0762       	43334.090         	74323.490         
+node_0763       	43945.660         	62432.090         
+node_0764       	46583.650         	65092.440         
+node_0765       	46865.910         	63342.030         
+node_0766       	46534.070         	66520.090         
+node_0767       	45299.650         	69794.210         
+node_0768       	47865.700         	61339.860         
+node_0769       	42892.800         	75772.050         
+node_0770       	45297.510         	75213.800         
+node_0771       	44058.020         	76285.370         
+node_0772       	42800.850         	75861.650         
+node_0773       	42862.670         	75682.970         
+node_0774       	43218.810         	74752.630         
+node_0775       	43232.410         	74384.680         
+node_0776       	46504.140         	75702.850         
+node_0777       	43519.350         	74458.530         
+node_0778       	47609.290         	61364.900         
+node_0779       	39541.960         	71022.260         
+node_0780       	41223.110         	69153.580         
+node_0781       	40425.500         	71164.530         
+node_0782       	41243.330         	69051.070         
+node_0783       	39554.980         	70751.910         
+node_0784       	40967.290         	69037.910         
+node_0785       	40013.370         	73976.450         
+node_0786       	40904.300         	71760.480         
+node_0787       	41368.330         	70611.960         
+node_0788       	41476.610         	70816.720         
+node_0789       	43722.490         	72849.880         
+node_0790       	41981.660         	79297.920         
+node_0791       	40080.640         	74139.640         
+node_0792       	51801.680         	69242.410         
+node_0793       	52799.140         	66143.100         
+node_0794       	51935.040         	69113.820         
+node_0795       	51845.620         	69380.290         
+node_0796       	51329.680         	72782.220         
+node_0797       	51194.770         	73197.170         
+node_0798       	51517.080         	75393.770         
+node_0799       	51505.030         	73701.200         
+node_0800       	52573.050         	74209.620         
+node_0801       	52902.950         	74027.320         
+node_0802       	53743.140         	71501.500         
+node_0803       	51977.030         	71509.760         
+node_0804       	51919.490         	71795.340         
+node_0805       	51581.240         	71562.950         
+node_0806       	53729.340         	71743.960         
+node_0807       	50381.990         	64422.900         
+node_0808       	51075.020         	64846.360         
+node_0809       	50467.920         	64336.140         
+node_0811       	51273.890         	95202.700         
+node_0827       	60122.510         	28695.000         
+node_1062       	49721.040         	26775.460         
+node_1063       	49187.800         	26718.140         
+node_1064       	41695.310         	71019.680         
+node_1065       	54376.100         	74533.930         
+node_1066       	32110.700         	71745.770         
+node_1094       	39049.550         	67619.810         
+node_1095       	40172.000         	67695.980         
+node_1096       	36521.200         	72031.610         
+node_1097       	36236.220         	70478.980         
+node_1098       	37815.510         	71243.540         
+node_1099       	38264.570         	69007.690         
+node_1100       	38900.060         	67836.190         
+node_1101       	38344.270         	69069.920         
+node_1102       	38115.080         	69283.210         
+node_1103       	37905.710         	69172.430         
+node_1104       	38295.870         	70359.690         
+node_1105       	38133.160         	70320.440         
+node_1106       	38137.630         	70785.480         
+node_1107       	36005.860         	72534.080         
+node_1108       	36009.940         	72507.230         
+node_1109       	35984.860         	72529.180         
+node_1110       	35487.590         	72460.490         
+node_1111       	37507.190         	72399.300         
+node_1112       	35278.810         	72506.200         
+node_1113       	35202.800         	72537.440         
+node_1114       	35223.400         	72273.550         
+node_1115       	39071.520         	68029.070         
+node_1116       	36011.300         	72499.230         
+node_1117       	35889.220         	72506.460         
+node_1118       	6389.680          	81803.860         
+node_1119       	6379.760          	81805.150         
+node_1120       	20302.760         	79970.560         
+node_1121       	6147.070          	81837.430         
+node_1122       	6446.830          	81793.530         
+node_1123       	1188.750          	84778.450         
+node_1124       	985.400           	84362.730         
+node_1125       	1723.530          	82397.750         
+node_1126       	1017.090          	84325.040         
+node_1127       	1024.280          	84316.260         
+node_1128       	1257.950          	84867.280         
+node_1129       	1252.700          	84856.430         
+node_1130       	1282.250          	84915.310         
+node_1131       	1066.660          	85083.140         
+node_1135       	50251.550         	64446.910         
+node_1136       	52405.480         	64725.780         
+node_1137       	51495.700         	61828.650         
+node_1138       	33030.980         	71637.570         
+node_1139       	33049.450         	71748.860         
+node_1140       	34218.560         	71152.650         
+node_1141       	33294.390         	72575.400         
+node_1142       	32665.120         	73776.080         
+node_1143       	36777.810         	70258.990         
+node_1144       	37707.810         	68169.800         
+reservoir_1     	60062.647         	29075.068         
+
+[VERTICES]
+;Link            	X-Coord           	Y-Coord
+link_0046       	44349.620         	35426.560         
+link_0046       	44349.620         	35426.560         
+link_0047       	60074.490         	28633.030         
+link_0047       	59936.470         	28669.180         
+link_0047       	59817.890         	28692.420         
+link_0047       	59642.930         	28715.660         
+link_0047       	59473.800         	28728.570         
+link_0047       	59339.670         	28725.990         
+link_0047       	59176.370         	28715.660         
+link_0047       	59024.740         	28700.170         
+link_0047       	58748.700         	28656.270         
+link_0047       	58748.700         	28656.270         
+link_0047       	57943.890         	28532.330         
+link_0047       	55593.610         	28191.490         
+link_0047       	53987.890         	27956.520         
+link_0047       	53332.760         	27837.740         
+link_0047       	50002.720         	27261.930         
+link_0047       	49932.740         	27109.580         
+link_0059       	48949.080         	91050.400         
+link_0059       	48888.820         	90771.530         
+link_0059       	48881.040         	90681.160         
+link_0059       	48884.930         	90518.490         
+link_0059       	48921.870         	89978.830         
+link_0059       	49028.790         	88832.370         
+link_0059       	49028.790         	88832.370         
+link_0059       	49295.110         	86118.570         
+link_0059       	49382.590         	85222.580         
+link_0059       	49429.250         	84719.070         
+link_0059       	49468.130         	84411.800         
+link_0059       	49528.390         	84143.260         
+link_0059       	49621.700         	83781.760         
+link_0059       	49715.010         	83479.650         
+link_0059       	49849.150         	83107.830         
+link_0059       	49926.910         	82911.590         
+link_0059       	50068.820         	82521.690         
+link_0059       	50210.730         	82028.510         
+link_0059       	50420.680         	81290.020         
+link_0059       	50537.320         	80747.780         
+link_0059       	50657.840         	80140.980         
+link_0059       	50731.710         	79766.580         
+link_0059       	50863.910         	79317.290         
+link_0059       	50943.610         	79025.510         
+link_0059       	50994.150         	78759.550         
+link_0059       	50994.150         	78759.550         
+link_0059       	51034.980         	78462.610         
+link_0059       	51139.950         	77757.690         
+link_0059       	51198.270         	77352.300         
+link_0059       	51258.530         	76887.520         
+link_0059       	51357.680         	76058.670         
+link_0060       	51262.420         	95181.780         
+link_0060       	51262.420         	95181.780         
+link_0060       	51114.680         	94895.170         
+link_0060       	50436.230         	93614.440         
+link_0060       	49330.100         	91466.120         
+link_0060       	49125.990         	91491.940         
+link_0105       	51277.970         	73404.260         
+link_0105       	51279.920         	73437.820         
+link_0105       	51303.250         	73476.550         
+link_0105       	51334.350         	73504.960         
+link_0105       	51369.340         	73523.030         
+link_0106       	50348.750         	72913.650         
+link_0107       	51414.050         	71697.480         
+link_0107       	51386.840         	72025.410         
+link_0107       	51367.400         	72366.250         
+link_0109       	52840.940         	66404.150         
+link_0109       	52798.170         	66522.930         
+link_0109       	52702.910         	66747.570         
+link_0109       	52646.540         	66910.250         
+link_0111       	49979.390         	67604.830         
+link_0111       	50136.860         	67826.900         
+link_0111       	50747.270         	68260.690         
+link_0111       	50671.450         	68823.590         
+link_0111       	51771.750         	69226.400         
+link_0112       	53245.280         	74147.900         
+link_0112       	54291.150         	74504.230         
+link_0119       	51765.910         	69611.130         
+link_0119       	51723.150         	69766.060         
+link_0119       	51688.150         	69910.660         
+link_0119       	51557.910         	70659.470         
+link_0127       	52319.950         	65841.250         
+link_0127       	52319.950         	65841.250         
+link_0130       	51410.160         	62213.390         
+link_0130       	51396.560         	62319.250         
+link_0130       	51390.720         	62412.210         
+link_0130       	51390.720         	62505.160         
+link_0130       	51400.440         	62611.030         
+link_0130       	51474.320         	63179.100         
+link_0130       	51600.670         	63266.890         
+link_0130       	51645.390         	63605.140         
+link_0131       	50477.050         	64413.340         
+link_0131       	50620.910         	64552.780         
+link_0131       	50914.450         	64844.560         
+link_0132       	49423.410         	61743.440         
+link_0132       	49576.990         	61849.310         
+link_0132       	49921.070         	62159.160         
+link_0132       	50202.950         	62445.780         
+link_0132       	50288.490         	62556.810         
+link_0132       	50317.650         	62616.200         
+link_0132       	50333.200         	62691.080         
+link_0132       	50337.090         	62763.380         
+link_0132       	50346.810         	63179.100         
+link_0132       	50368.190         	63465.710         
+link_0140       	53552.430         	71573.540         
+link_0140       	53556.320         	71545.140         
+link_0140       	53558.270         	71454.760         
+link_0140       	53548.550         	71392.790         
+link_0140       	53529.110         	71338.570         
+link_0140       	53501.890         	71292.090         
+link_0140       	53455.230         	71235.280         
+link_0140       	53377.470         	71168.150         
+link_0140       	53249.170         	71077.770         
+link_0140       	53126.700         	71010.640         
+link_0140       	53012.010         	70951.250         
+link_0140       	52866.210         	70902.190         
+link_0140       	52708.740         	70858.290         
+link_0140       	52512.400         	70806.650         
+link_0140       	52397.710         	70783.410         
+link_0140       	52310.230         	70775.670         
+link_0140       	52263.570         	70775.670         
+link_0140       	52209.140         	70783.410         
+link_0140       	52168.320         	70798.910         
+link_0140       	52135.270         	70824.730         
+link_0140       	52102.220         	70871.200         
+link_0140       	52080.840         	70922.850         
+link_0140       	52075.010         	70979.650         
+link_0140       	52030.300         	71289.510         
+link_0141       	53744.890         	71490.910         
+link_0142       	53443.570         	73047.920         
+link_0142       	53468.840         	72967.880         
+link_0142       	53482.450         	72931.730         
+link_0142       	53496.060         	72908.490         
+link_0142       	53525.220         	72895.580         
+link_0142       	53552.430         	72890.420         
+link_0142       	53585.480         	72890.420         
+link_0142       	53626.300         	72895.580         
+link_0142       	53725.450         	72216.480         
+link_0143       	52809.830         	73995.560         
+link_0441       	53731.280         	99940.610         
+link_0441       	53115.040         	98739.930         
+link_0441       	52574.610         	97681.260         
+link_0441       	51674.550         	95969.320         
+link_0484       	38023.900         	94234.150         
+link_0484       	38103.610         	93815.840         
+link_0484       	38272.730         	92919.850         
+link_0484       	38696.520         	90743.130         
+link_0484       	38782.060         	90260.280         
+link_0484       	38875.370         	89576.020         
+link_0484       	38951.180         	88917.580         
+link_0484       	39044.490         	88212.660         
+link_0484       	39081.430         	87874.410         
+link_0484       	39133.920         	87497.420         
+link_0484       	39196.120         	87195.310         
+link_0484       	39254.440         	86952.590         
+link_0484       	39394.410         	86451.660         
+link_0484       	39592.700         	85875.850         
+link_0484       	39929.010         	85008.260         
+link_0484       	40463.600         	83642.330         
+link_0484       	40687.160         	83020.040         
+link_0484       	41145.940         	81741.890         
+link_0484       	41326.730         	81220.310         
+link_0484       	41456.980         	80794.260         
+link_0484       	41676.650         	80133.240         
+link_0484       	41791.340         	79820.800         
+link_0485       	42055.720         	79097.810         
+link_0505       	64436.790         	40353.230         
+link_0505       	64234.620         	40022.720         
+link_0505       	64234.620         	40022.720         
+link_0505       	63750.560         	39227.430         
+link_0505       	62593.890         	37388.970         
+link_0505       	62074.850         	36567.860         
+link_0505       	61816.300         	36152.140         
+link_0505       	61077.590         	34982.440         
+link_0505       	60216.400         	33629.420         
+link_0505       	60146.420         	33508.060         
+link_0505       	60095.880         	33409.940         
+link_0505       	60058.940         	33324.730         
+link_0505       	60025.890         	33226.610         
+link_0505       	59983.130         	33043.280         
+link_0505       	59940.360         	32834.130         
+link_0505       	59926.750         	32728.260         
+link_0505       	59913.140         	32586.240         
+link_0505       	59895.650         	32426.150         
+link_0505       	59874.260         	32245.400         
+link_0505       	59862.600         	32121.460         
+link_0505       	59850.940         	31989.770         
+link_0505       	59845.100         	31840.010         
+link_0505       	59841.220         	31566.310         
+link_0505       	59841.220         	31442.370         
+link_0505       	59843.160         	31302.930         
+link_0505       	59850.940         	31148.010         
+link_0505       	59862.600         	30987.920         
+link_0505       	59876.210         	30853.650         
+link_0505       	59889.820         	30709.050         
+link_0505       	59920.920         	30484.400         
+link_0505       	59950.080         	30303.660         
+link_0505       	59981.180         	30138.400         
+link_0505       	60008.400         	30004.130         
+link_0505       	60039.500         	29875.030         
+link_0505       	60072.550         	29758.830         
+link_0505       	60107.540         	29652.960         
+link_0505       	60196.960         	29407.660         
+link_0512       	43243.500         	74703.060         
+link_0513       	49024.900         	69187.670         
+link_0513       	49024.900         	69187.670         
+link_0513       	48674.980         	69012.080         
+link_0513       	48400.880         	68877.810         
+link_0513       	48171.490         	68774.530         
+link_0513       	48045.130         	68707.400         
+link_0513       	47957.650         	68619.600         
+link_0513       	47893.500         	68503.410         
+link_0513       	47837.130         	68320.080         
+link_0513       	47806.020         	68136.750         
+link_0513       	47800.190         	68015.390         
+link_0513       	47800.190         	67886.280         
+link_0513       	47806.020         	67715.860         
+link_0513       	47796.300         	67602.250         
+link_0513       	47765.200         	67488.640         
+link_0513       	47704.930         	67364.700         
+link_0513       	47611.620         	67264.000         
+link_0513       	46952.610         	66768.230         
+link_0513       	46785.430         	66659.780         
+link_0514       	45325.500         	69600.810         
+link_0514       	45428.530         	69252.220         
+link_0514       	45545.170         	68813.260         
+link_0514       	45648.200         	68467.260         
+link_0514       	45797.890         	68002.480         
+link_0514       	46079.770         	67209.770         
+link_0514       	46316.930         	66543.590         
+link_0515       	47020.650         	63238.480         
+link_0515       	47115.910         	62941.540         
+link_0515       	47242.270         	62608.450         
+link_0515       	47428.890         	62156.580         
+link_0515       	47638.840         	61650.490         
+link_0516       	46626.020         	64986.570         
+link_0516       	46678.510         	64692.210         
+link_0516       	46754.330         	64351.370         
+link_0516       	46884.570         	63806.550         
+link_0517       	46396.630         	66290.540         
+link_0517       	46439.400         	66127.870         
+link_0517       	46497.720         	65838.670         
+link_0517       	46591.030         	65275.770         
+link_0519       	44246.590         	74713.390         
+link_0519       	43960.820         	74620.430         
+link_0520       	46326.650         	75601.630         
+link_0520       	46163.360         	75467.360         
+link_0520       	46021.450         	75376.990         
+link_0520       	45825.100         	75281.450         
+link_0522       	46701.840         	74181.470         
+link_0522       	46692.120         	74264.100         
+link_0522       	46688.230         	74338.980         
+link_0522       	46696.010         	74419.020         
+link_0522       	46721.280         	74511.980         
+link_0522       	46767.940         	74666.910         
+link_0522       	46797.090         	74808.920         
+link_0522       	46802.930         	74925.120         
+link_0522       	46791.260         	75051.640         
+link_0522       	46769.880         	75170.420         
+link_0522       	46705.730         	75346.000         
+link_0522       	46664.900         	75457.030         
+link_0525       	42401.750         	78170.830         
+link_0525       	42471.730         	77943.610         
+link_0525       	42524.220         	77672.490         
+link_0525       	42572.820         	77261.930         
+link_0525       	42603.930         	76941.750         
+link_0525       	42706.960         	76288.470         
+link_0525       	42749.720         	76045.760         
+link_0525       	42796.380         	75877.920         
+link_0527       	43599.240         	76187.770         
+link_0528       	33360.290         	75784.960         
+link_0528       	33074.520         	75854.680         
+link_0533       	43951.100         	72670.940         
+link_0533       	44005.540         	72469.530         
+link_0533       	44094.960         	72182.920         
+link_0533       	44355.450         	71483.160         
+link_0533       	44477.920         	71168.150         
+link_0533       	44571.240         	70966.740         
+link_0533       	44678.150         	70770.500         
+link_0533       	44818.120         	70538.110         
+link_0533       	44965.860         	70316.050         
+link_0533       	45074.730         	70153.380         
+link_0537       	39672.400         	74116.920         
+link_0537       	39367.190         	74155.650         
+link_0537       	39096.980         	74220.200         
+link_0540       	41390.880         	68498.240         
+link_0540       	41317.010         	68709.980         
+link_0540       	41276.190         	68849.410         
+link_0545       	38982.290         	72477.280         
+link_0545       	39087.260         	72195.830         
+link_0545       	39118.370         	72208.740         
+link_0545       	39153.360         	72219.070         
+link_0545       	39196.120         	72208.740         
+link_0545       	39238.890         	72182.920         
+link_0545       	39264.160         	72118.360         
+link_0545       	39081.430         	71741.380         
+link_0545       	38964.790         	71658.750         
+link_0545       	38970.620         	71607.110         
+link_0545       	38968.680         	71555.460         
+link_0545       	38955.070         	71506.400         
+link_0545       	38918.140         	71465.090         
+link_0545       	38982.290         	71312.750         
+link_0545       	39052.270         	71366.970         
+link_0545       	39139.750         	71421.190         
+link_0545       	39207.790         	71454.760         
+link_0545       	39258.330         	71457.340         
+link_0545       	39328.320         	71449.600         
+link_0545       	39384.690         	71408.280         
+link_0545       	39431.350         	71328.240         
+link_0547       	47944.040         	61245.090         
+link_0547       	48163.710         	61227.020         
+link_0547       	48449.480         	61332.890         
+link_0547       	48719.690         	61425.840         
+link_0553       	46565.760         	65087.280         
+link_0553       	46575.480         	64963.330         
+link_0553       	45782.340         	64235.180         
+link_0553       	45580.160         	64387.520         
+link_0553       	45018.350         	64178.370         
+link_0553       	43686.720         	63313.370         
+link_0554       	44207.710         	61539.450         
+link_0554       	46451.070         	63104.210         
+link_0554       	46591.030         	63194.590         
+link_0555       	43356.250         	74310.580         
+link_0555       	43435.950         	74230.530         
+link_0555       	43494.270         	74147.900         
+link_0555       	43535.090         	74062.690         
+link_0555       	43585.640         	73915.510         
+link_0555       	43787.810         	73244.160         
+link_0556       	45158.320         	70021.690         
+link_0556       	45210.810         	69920.990         
+link_0559       	43443.730         	36030.780         
+link_0559       	43435.950         	36010.120         
+link_0559       	43309.590         	35658.950         
+link_0559       	43185.180         	35343.940         
+link_0559       	43012.160         	34935.960         
+link_0559       	42576.710         	33941.850         
+link_0559       	42236.510         	33162.050         
+link_0559       	42125.710         	32916.750         
+link_0559       	41997.400         	32661.120         
+link_0559       	41849.660         	32387.420         
+link_0559       	41651.370         	32085.310         
+link_0559       	41435.590         	31788.370         
+link_0559       	41272.300         	31566.310         
+link_0559       	41048.740         	31302.930         
+link_0559       	39709.340         	29699.440         
+link_0559       	38943.410         	28790.540         
+link_0560       	42940.230         	75457.030         
+link_0560       	43052.990         	75144.600         
+link_0560       	43148.240         	74896.720         
+link_0563       	45063.060         	76239.410         
+link_0563       	44761.750         	76425.330         
+link_0567       	36161.570         	74078.190         
+link_0567       	36184.900         	74189.220         
+link_0567       	36231.550         	74251.190         
+link_0567       	36301.530         	74266.680         
+link_0567       	36420.120         	74251.190         
+link_0567       	38301.890         	73732.180         
+link_0568       	40776.580         	53777.630         
+link_0568       	40065.080         	53976.450         
+link_0568       	38863.700         	55882.050         
+link_0568       	39040.610         	56421.710         
+link_0568       	35862.190         	61379.360         
+link_0568       	33109.520         	65694.070         
+link_0572       	32116.140         	76120.640         
+link_0574       	34132.050         	74171.140         
+link_0574       	34767.730         	74023.960         
+link_0574       	34824.110         	74016.220         
+link_0574       	34872.710         	74023.960         
+link_0574       	34934.920         	74075.600         
+link_0574       	35002.950         	74160.810         
+link_0576       	41336.450         	70687.870         
+link_0578       	40910.720         	69022.410         
+link_0578       	40689.100         	68939.790         
+link_0578       	40609.400         	68911.380         
+link_0578       	40531.640         	68921.710         
+link_0578       	40411.110         	68968.190         
+link_0578       	40296.420         	69050.820         
+link_0578       	40201.160         	69146.350         
+link_0578       	40138.960         	69262.550         
+link_0578       	39829.860         	70039.760         
+link_0578       	39547.990         	70747.260         
+link_0581       	41064.290         	69616.300         
+link_0581       	41145.940         	69414.890         
+link_0581       	41204.260         	69241.890         
+link_0584       	41954.640         	56754.800         
+link_0584       	41839.940         	56594.710         
+link_0584       	40797.970         	54911.180         
+link_0584       	40860.170         	54319.870         
+link_0584       	40990.420         	53787.960         
+link_0585       	40107.850         	74145.320         
+link_0585       	40564.690         	74235.700         
+link_0585       	41075.960         	74349.310         
+link_0585       	41287.850         	74390.620         
+link_0585       	41721.360         	74447.430         
+link_0585       	42125.710         	74468.090         
+link_0585       	42248.180         	74470.670         
+link_0585       	42384.260         	74468.090         
+link_0585       	42792.490         	74442.260         
+link_0585       	43027.710         	74431.940         
+link_0585       	43185.180         	74406.110         
+link_0592       	49781.110         	26830.720         
+link_0592       	49781.110         	26830.720         
+link_0592       	49886.080         	26923.670         
+link_0666       	43558.420         	35850.030         
+link_0666       	43558.420         	35850.030         
+link_0688       	43358.190         	72562.490         
+link_0688       	43503.990         	72699.340         
+link_0688       	43663.400         	72820.700         
+link_0693       	44841.450         	59127.760         
+link_0693       	43307.650         	57893.510         
+link_0693       	42108.210         	56891.650         
+link_0696       	40368.350         	73104.730         
+link_0697       	40650.220         	72381.740         
+link_0709       	44708.290         	40521.070         
+link_0711       	35454.930         	58123.320         
+link_0711       	38289.260         	55634.170         
+link_0711       	38306.750         	55089.340         
+link_0711       	39632.550         	53033.980         
+link_0711       	40962.230         	52502.070         
+link_0712       	44345.730         	41778.560         
+link_0712       	44147.450         	42437.000         
+link_0712       	43850.020         	43464.680         
+link_0712       	43272.660         	45445.160         
+link_0712       	42977.170         	46462.510         
+link_0712       	42856.640         	46873.060         
+link_0712       	42012.950         	49690.150         
+link_0712       	41766.070         	50495.770         
+link_0712       	41330.620         	51959.820         
+link_0713       	41033.190         	52935.860         
+link_0713       	41033.190         	52935.860         
+link_0714       	44232.980         	41453.210         
+link_0714       	44360.310         	40038.220         
+link_0714       	44146.480         	38920.160         
+link_0714       	43636.180         	37489.670         
+link_0715       	42948.980         	35578.910         
+link_0715       	43000.500         	35398.160         
+link_0715       	44516.800         	34308.510         
+link_0715       	46778.630         	33851.480         
+link_0716       	49224.160         	27494.320         
+link_0717       	45862.040         	36965.500         
+link_0717       	45904.810         	36999.070         
+link_0717       	46231.400         	36077.260         
+link_0717       	46723.220         	34775.870         
+link_0718       	47615.510         	32441.640         
+link_0718       	48210.370         	30863.970         
+link_0718       	48441.700         	30244.270         
+link_0718       	49026.840         	28720.820         
+link_0718       	49026.840         	28720.820         
+link_0718       	49664.470         	27109.580         
+link_0720       	43801.420         	36511.050         
+link_0720       	43801.420         	36511.050         
+link_0720       	43807.250         	36526.540         
+link_0720       	44248.530         	37802.110         
+link_0720       	44248.530         	37802.110         
+link_0720       	44497.360         	38538.010         
+link_0720       	44592.620         	38811.710         
+link_0720       	44771.470         	40071.780         
+link_0720       	44771.470         	40141.500         
+link_0721       	10848.000         	81026.650         
+link_0721       	14023.500         	80505.060         
+link_0721       	15965.540         	80241.690         
+link_0721       	16618.720         	80151.310         
+link_0721       	17167.890         	79908.590         
+link_0721       	17737.480         	79544.520         
+link_0721       	18714.330         	78759.550         
+link_0721       	20037.210         	77460.750         
+link_0721       	21116.120         	77086.350         
+link_0721       	22599.380         	79059.080         
+link_0721       	25694.200         	77974.590         
+link_0721       	27647.900         	77305.830         
+link_0722       	29513.150         	76626.730         
+link_0722       	29946.660         	75464.780         
+link_0722       	29478.160         	72417.890         
+link_0722       	31376.460         	65954.860         
+link_0722       	31756.500         	65469.430         
+link_0722       	32658.510         	62636.850         
+link_0722       	32865.550         	62252.120         
+link_0723       	29590.910         	76810.060         
+link_0723       	29590.910         	76810.060         
+link_0725       	49541.030         	27107.000         
+link_0725       	49634.340         	27241.270         
+link_0725       	49789.860         	27607.930         
+link_0725       	49973.560         	27638.920         
+link_0749       	51433.490         	75263.380         
+link_0749       	51443.210         	75118.780         
+link_0751       	52007.940         	75211.730         
+link_0751       	52211.090         	75376.990         
+link_0751       	52228.580         	75482.850         
+link_0751       	52830.240         	76105.140         
+link_0751       	52909.950         	76115.470         
+link_0751       	53015.890         	76164.530         
+link_0751       	53042.140         	76234.250         
+link_0751       	53033.390         	76350.440         
+link_0751       	52670.840         	78478.100         
+link_0752       	48863.550         	72394.650         
+link_0753       	48354.220         	72123.530         
+link_0753       	48128.720         	71950.530         
+link_0753       	47912.940         	71772.360         
+link_0753       	47701.050         	71573.540         
+link_0753       	47498.870         	71374.720         
+link_0753       	47209.220         	71039.040         
+link_0753       	47036.200         	70868.620         
+link_0753       	46810.700         	70651.720         
+link_0753       	46678.510         	70556.190         
+link_0753       	46519.110         	70463.230         
+link_0753       	46188.630         	70297.980         
+link_0753       	45933.970         	70174.030         
+link_0753       	45449.920         	69957.140         
+link_0753       	45397.430         	69846.110         
+link_0754       	48830.500         	72348.170         
+link_0754       	48820.780         	72304.280         
+link_0754       	48822.720         	72242.310         
+link_0754       	49017.120         	71333.400         
+link_0754       	49038.510         	71245.610         
+link_0754       	49024.900         	71157.820         
+link_0754       	48996.710         	71088.100         
+link_0754       	48951.030         	71044.210         
+link_0754       	48629.300         	70765.340         
+link_0754       	48597.220         	70731.770         
+link_0754       	48582.640         	70682.710         
+link_0754       	48573.890         	70618.160         
+link_0754       	48575.840         	70579.430         
+link_0754       	48590.420         	70455.480         
+link_0754       	48470.860         	70398.680         
+link_0754       	48459.200         	70450.320         
+link_0754       	48439.760         	70499.380         
+link_0754       	48408.660         	70553.600         
+link_0754       	48362.000         	70576.840         
+link_0754       	48333.810         	70576.840         
+link_0754       	48293.960         	70579.430         
+link_0754       	48267.720         	70752.430         
+link_0757       	258.550           	85715.760         
+link_0757       	623.820           	85644.750         
+link_0757       	1086.490          	85299.010         
+link_0757       	1456.820          	84993.540         
+link_0757       	2089.390          	84485.130         
+link_0757       	2431.140          	84167.530         
+link_0757       	3002.870          	83657.300         
+link_0757       	3505.190          	83206.210         
+link_0757       	3916.350          	82841.360         
+link_0757       	3985.940          	82388.450         
+link_0757       	4121.630          	82261.410         
+link_0757       	4189.480          	82187.560         
+link_0757       	4353.940          	82092.280         
+link_0757       	4454.250          	82044.260         
+link_0757       	4611.510          	81992.870         
+link_0757       	4839.930          	81929.350         
+link_0757       	6544.800          	81671.660         
+link_0757       	6865.170          	81591.100         
+link_0757       	6926.600          	81578.960         
+link_0758       	236.970           	85745.200         
+link_0758       	125.970           	85827.050         
+link_0758       	92.140            	85852.100         
+link_0763       	59981.180         	29087.480         
+link_0763       	59924.810         	29095.230         
+link_0763       	59883.980         	29095.230         
+link_0763       	59829.550         	29087.480         
+link_0763       	58748.700         	28948.050         
+link_0763       	57877.790         	28837.020         
+link_0763       	54209.500         	28279.280         
+link_0763       	50484.830         	27641.500         
+link_0767       	49564.350         	27054.330         
+link_0767       	49401.250         	26956.720         
+link_0769       	55220.370         	74829.580         
+link_0769       	56464.520         	75271.120         
+link_0769       	57045.770         	75519.000         
+link_0770       	32108.370         	71759.450         
+link_0770       	32462.170         	74070.440         
+link_0770       	32405.790         	74204.710         
+link_0770       	32662.400         	75919.230         
+link_0792       	39100.480         	67571.270         
+link_0792       	39162.490         	67524.790         
+link_0792       	39214.790         	67491.220         
+link_0792       	39267.080         	67465.400         
+link_0792       	39322.290         	67447.320         
+link_0792       	39397.910         	67429.250         
+link_0792       	39465.560         	67418.920         
+link_0792       	39528.740         	67421.500         
+link_0792       	39600.470         	67426.670         
+link_0792       	39670.650         	67437.000         
+link_0792       	39754.820         	67465.400         
+link_0792       	39840.170         	67496.390         
+link_0792       	39908.980         	67519.620         
+link_0792       	39976.440         	67560.940         
+link_0793       	36420.510         	71490.910         
+link_0793       	36402.230         	71434.100         
+link_0793       	36353.050         	71294.670         
+link_0793       	36330.110         	71214.630         
+link_0793       	36313.000         	71147.490         
+link_0793       	36300.370         	71093.270         
+link_0793       	36232.720         	70543.280         
+link_0794       	36826.020         	71929.870         
+link_0794       	36951.990         	71888.560         
+link_0794       	37061.440         	71849.820         
+link_0794       	37171.660         	71798.180         
+link_0794       	37259.530         	71759.450         
+link_0794       	37323.680         	71720.720         
+link_0794       	37399.300         	71671.660         
+link_0794       	37477.450         	71617.430         
+link_0794       	37555.600         	71545.140         
+link_0794       	37632.000         	71472.840         
+link_0794       	37710.340         	71379.880         
+link_0794       	37798.010         	71266.270         
+link_0795       	38409.390         	68676.410         
+link_0795       	38446.720         	68598.950         
+link_0795       	38518.840         	68459.510         
+link_0795       	38600.490         	68307.170         
+link_0795       	38669.110         	68190.970         
+link_0795       	38738.510         	68077.360         
+link_0795       	38785.560         	68023.140         
+link_0795       	38819.380         	67981.820         
+link_0795       	38865.450         	67896.610         
+link_0797       	38229.580         	69086.970         
+link_0799       	38305.200         	70313.470         
+link_0799       	38318.220         	70223.090         
+link_0799       	38327.750         	70145.630         
+link_0799       	38327.750         	70088.820         
+link_0799       	38319.970         	69990.700         
+link_0799       	38311.220         	69910.660         
+link_0799       	38289.650         	69791.880         
+link_0799       	38255.630         	69647.280         
+link_0799       	38227.830         	69587.900         
+link_0799       	38173.980         	69482.030         
+link_0799       	38120.130         	69368.420         
+link_0801       	37891.710         	71144.910         
+link_0801       	37931.760         	71093.270         
+link_0801       	38009.910         	70977.070         
+link_0801       	38101.080         	70840.220         
+link_0804       	36011.300         	72497.930         
+link_0804       	36029.570         	72438.550         
+link_0804       	36049.590         	72384.320         
+link_0804       	36068.650         	72335.260         
+link_0804       	36098.190         	72278.450         
+link_0804       	36132.210         	72234.560         
+link_0804       	36180.810         	72188.080         
+link_0804       	36245.940         	72144.190         
+link_0804       	36312.810         	72110.620         
+link_0804       	36473.380         	72046.060         
+link_0805       	35782.100         	72479.860         
+link_0805       	35729.030         	72464.370         
+link_0805       	35654.380         	72454.040         
+link_0805       	35591.010         	72451.460         
+link_0805       	35535.410         	72456.620         
+link_0806       	38175.730         	70726.610         
+link_0806       	38195.750         	70693.040         
+link_0806       	38216.550         	70638.810         
+link_0806       	38245.320         	70563.930         
+link_0806       	38263.600         	70501.960         
+link_0806       	38287.900         	70398.680         
+link_0807       	38989.670         	67671.970         
+link_0808       	37968.310         	71480.580         
+link_0808       	37999.210         	71542.550         
+link_0808       	38019.820         	71591.610         
+link_0808       	38027.400         	71640.670         
+link_0808       	38049.760         	71756.870         
+link_0808       	38071.340         	71875.650         
+link_0808       	38104.190         	72033.150         
+link_0808       	38120.130         	72074.470         
+link_0808       	38142.680         	72115.780         
+link_0808       	38164.260         	72146.770         
+link_0808       	38217.520         	72185.500         
+link_0808       	38211.110         	72219.070         
+link_0809       	35426.740         	72466.950         
+link_0809       	35361.230         	72477.280         
+link_0809       	35317.100         	72490.190         
+link_0810       	35254.310         	72513.430         
+link_0814       	13080.670         	80913.030         
+link_0814       	13862.150         	80817.500         
+link_0814       	17036.670         	80409.520         
+link_0814       	17853.140         	80311.400         
+link_0814       	18790.140         	80182.300         
+link_0814       	19705.760         	80071.270         
+link_0814       	20218.970         	79988.640         
+link_0815       	10871.140         	81266.780         
+link_0815       	8878.360          	81486.260         
+link_0815       	7514.850          	81648.940         
+link_0816       	20949.910         	79844.040         
+link_0816       	21363.980         	79722.680         
+link_0816       	22538.140         	79306.960         
+link_0816       	23578.170         	78953.210         
+link_0816       	24153.590         	78749.230         
+link_0816       	26568.020         	77855.810         
+link_0816       	28743.330         	77081.180         
+link_0817       	6622.950          	81767.710         
+link_0817       	6523.810          	81783.210         
+link_0819       	6147.260          	81837.430         
+link_0820       	1188.360          	84778.450         
+link_0820       	1090.770          	84574.470         
+link_0820       	988.900           	84370.480         
+link_0821       	985.210           	84362.730         
+link_0821       	931.170           	84251.700         
+link_0821       	835.330           	84096.780         
+link_0821       	786.340           	84021.900         
+link_0821       	652.590           	83846.310         
+link_0821       	337.480           	83487.400         
+link_0821       	206.650           	83316.980         
+link_0821       	148.910           	83236.930         
+link_0823       	1171.440          	84135.510         
+link_0823       	1442.820          	83807.580         
+link_0823       	1467.900          	83779.180         
+link_0823       	1488.700          	83758.520         
+link_0823       	1539.440          	83722.370         
+link_0823       	1579.490          	83704.300         
+link_0823       	1638.970          	83675.890         
+link_0823       	1670.080          	83655.240         
+link_0823       	1706.040          	83621.670         
+link_0823       	1740.060          	83580.360         
+link_0823       	1767.080          	83541.620         
+link_0823       	1789.440          	83495.150         
+link_0823       	1816.850          	83433.170         
+link_0823       	1847.370          	83319.560         
+link_0823       	1874.000          	83213.700         
+link_0823       	1889.940          	83159.470         
+link_0823       	1899.080          	83138.810         
+link_0823       	1914.040          	83115.580         
+link_0823       	1937.960          	83100.080         
+link_0823       	1972.170          	83094.920         
+link_0823       	2053.620          	83087.170         
+link_0823       	2044.870          	82896.100         
+link_0823       	1940.680          	82893.510         
+link_0823       	1916.960          	82888.350         
+link_0823       	1900.830          	82880.600         
+link_0823       	1881.580          	82865.110         
+link_0823       	1863.500          	82834.130         
+link_0823       	1827.540          	82725.680         
+link_0824       	1218.880          	84786.200         
+link_0825       	6029.260          	81904.570         
+link_0825       	5872.770          	81925.220         
+link_0825       	5224.450          	82015.600         
+link_0825       	5165.940          	82023.340         
+link_0825       	4744.870          	82103.390         
+link_0825       	4588.380          	82134.370         
+link_0825       	4381.540          	82253.150         
+link_0825       	4277.730          	82328.030         
+link_0825       	4128.820          	82439.060         
+link_0825       	4070.310          	82488.120         
+link_0825       	3819.340          	82710.180         
+link_0825       	3398.470          	83082.010         
+link_0825       	3086.850          	83353.130         
+link_0825       	2951.550          	83469.320         
+link_0825       	2145.960          	84171.660         
+link_0825       	1959.530          	84334.330         
+link_0825       	1754.640          	84512.500         
+link_0825       	1428.240          	84801.690         
+link_0826       	1281.470          	84915.310         
+link_0827       	1270.200          	84892.070         
+link_0835       	35117.070         	72572.300         
+link_0835       	34964.850         	72659.570         
+link_0835       	34759.180         	72752.530         
+link_0835       	34582.080         	72801.850         
+link_0835       	34343.560         	72801.850         
+link_0835       	34063.620         	72779.900         
+link_0835       	33833.260         	72686.940         
+link_0835       	33656.360         	72588.570         
+link_0835       	33561.690         	72534.080         
+link_0835       	33487.620         	72506.710         
+link_0835       	33458.850         	72539.510         
+link_0835       	33368.260         	72659.570         
+link_0837       	33202.630         	71647.900         
+link_0837       	33428.910         	71494.270         
+link_0837       	33572.960         	71401.830         
+link_0838       	33253.180         	72528.400         
+link_0838       	33327.240         	72413.760         
+link_0838       	33335.410         	72359.020         
+link_0838       	33335.410         	72320.800         
+link_0838       	33310.720         	72288.010         
+link_0838       	33125.460         	71976.610         
+link_0838       	33055.670         	71785.270         
+link_0839       	33158.890         	72795.650         
+link_0839       	33112.630         	72860.460         
+link_0839       	33053.530         	72901.520         
+link_0839       	33022.620         	72921.920         
+link_0839       	32968.580         	72949.290         
+link_0839       	32914.730         	72939.220         
+link_0839       	32868.270         	72898.160         
+link_0839       	32850.380         	72829.740         
+link_0839       	32845.130         	72781.970         
+link_0839       	32755.130         	72805.980         
+link_0839       	32760.380         	72874.150         
+link_0839       	32773.210         	72908.230         
+link_0839       	32780.980         	72928.890         
+link_0839       	32811.700         	72973.300         
+link_0839       	32832.300         	73000.670         
+link_0839       	32878.570         	73038.110         
+link_0839       	32914.730         	73082.520         
+link_0839       	32948.170         	73239.770         
+link_0839       	33012.320         	73676.930         
+link_0840       	37979.390         	70291.780         
+link_0840       	37893.070         	70242.460         
+link_0840       	37855.940         	70182.560         
+link_0840       	37720.250         	70034.860         
+link_0840       	37584.370         	69936.480         
+link_0840       	37481.530         	69898.260         
+link_0840       	37374.610         	69887.420         
+link_0840       	37214.040         	69898.260         
+link_0840       	36983.680         	70012.910         
+link_0841       	37754.080         	69092.130         
+link_0841       	37599.730         	68981.360         
+link_0841       	37516.520         	68862.580         
+link_0841       	37507.190         	68739.670         
+link_0841       	37534.990         	68591.970         
+link_0841       	37565.900         	68440.400         
+
+[LABELS]
+;X-Coord             Y-Coord             Label & Anchor Node
+
+[BACKDROP]
+  DIMENSIONS  	-10000.000        	-10000.000        	110000.000        	110000.000        
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
