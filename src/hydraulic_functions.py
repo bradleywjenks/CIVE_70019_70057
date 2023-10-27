@@ -68,7 +68,7 @@ def epanet_solver(inp_file):
     sim = wntr.sim.EpanetSimulator(wn)
     results = sim.run_sim()
     
-    nt = int(wn.options.time.duration / wn.options.time.hydraulic_timestep)
+    nt = int(wn.options.time.duration / wn.options.time.report_timestep)
 
     ## get hydraulic head results
     h_df = results.node['head'].T
