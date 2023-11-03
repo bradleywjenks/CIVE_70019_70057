@@ -8,3 +8,5 @@ notebooks/optimal_tank_solution.ipynb
 notebooks/model_calibration_solution.ipynb
 
 notebooks/.ipynb_checkpoints
+
+.ipynb_checkpoints
