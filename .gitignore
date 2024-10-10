@@ -6,6 +6,7 @@ src/null_space_code.py
 
 notebooks/optimal_tank_solution.ipynb
 notebooks/model_calibration_solution.ipynb
+notebooks/model_calibration_coursework.ipynb
 
 notebooks/.ipynb_checkpoints
 
