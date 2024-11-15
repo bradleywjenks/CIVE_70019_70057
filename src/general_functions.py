@@ -216,145 +216,127 @@ Plot network function
 """ 
 
 def plot_network(wdn, plot_type='layout', pcv_nodes=None, sensor_nodes=None, vals=None, t=None):
+    fig, ax = plt.subplots(figsize=(10, 8))  # Create a figure and axis object
 
-    ## unload data
+    # Unload data
     link_df = wdn.link_df
     node_df = wdn.node_df
     net_info = wdn.net_info
     h0_df = wdn.h0_df
     
-    ## draw network
+    # Draw network
     if plot_type == 'layout':
         uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
         pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
 
-        nx.draw(uG, pos, node_size=20, node_shape='o', node_color='black')
-        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=80, node_shape='s', node_color='black') # draw reservoir nodes
+        nx.draw(uG, pos, node_size=20, node_shape='o', node_color='black', ax=ax)
+        nx.draw_networkx_nodes(
+            uG, pos, 
+            nodelist=net_info['reservoir_names'], 
+            node_size=80, 
+            node_shape='s',  # Square shape
+            node_color='black', 
+            ax=ax
+        )
 
         if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='red') # draw pcv nodes (downstream node)
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='red', ax=ax)
 
         if sensor_nodes is not None:
             sensor_names = [net_info['junction_names'][i] for i in sensor_nodes]
-            nx.draw_networkx_nodes(uG, pos, sensor_names, node_size=100, node_shape='o', node_color='red', edgecolors='white')
+            nx.draw_networkx_nodes(uG, pos, sensor_names, node_size=100, node_shape='o', node_color='red', edgecolors='white', ax=ax)
 
-
-    elif plot_type == 'hydraulic head':
-
+    elif plot_type in ['hydraulic head', 'pressure head', 'flow']:
         uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
         pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
-        
-        # create dictionary from dataframe to match node IDs
-        vals_df = vals.set_index('node_ID')[f'h_{t}']
-        h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
 
-        junction_vals = [vals_df[node] for node in net_info['junction_names']]
-        reservoir_vals = [h0_df[node] for node in net_info['reservoir_names']]
-        node_vals_all = junction_vals + reservoir_vals
-
-        # color scaling
-        min_val = min(node_vals_all)
-        max_val = max(node_vals_all)
-
-        # plot hydraulic heads
+        # Prepare data and color scaling
         cmap = cm.get_cmap('RdYlBu')
-        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=20, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
-        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=100, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
-        if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
 
-        # create a color bar
-        sm = plt.cm.ScalarMappable(cmap=cmap)
+        if plot_type == 'hydraulic head':
+            vals_df = vals.set_index('node_ID')[f'h_{t}']
+            h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
+
+            junction_vals = [vals_df[node] for node in net_info['junction_names']]
+            reservoir_vals = [h0_df[node] for node in net_info['reservoir_names']]
+            node_vals_all = junction_vals + reservoir_vals
+
+        elif plot_type == 'pressure head':
+            vals_df = vals.set_index('node_ID')[f'h_{t}']
+            h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
+
+            junction_vals = [vals_df[node] - node_df.loc[node_df['node_ID'] == node, 'elev'].to_numpy()[0]
+                             for node in net_info['junction_names']]
+            reservoir_vals = [0 for node in net_info['reservoir_names']]
+            node_vals_all = junction_vals + reservoir_vals
+
+        elif plot_type == 'flow':
+            edge_df = link_df[['link_ID', 'node_out', 'node_in']].set_index('link_ID')
+            vals_df = vals.set_index('link_ID')[f'q_{t}'].abs() * 1000
+            edge_df = edge_df.join(vals_df)
+
+            uG = nx.from_pandas_edgelist(edge_df, source='node_out', target='node_in', edge_attr=f'q_{t}')
+            edge_values = nx.get_edge_attributes(uG, f'q_{t}').values()
+            norm = plt.Normalize(min(edge_values), max(edge_values))
+            edge_colors = cmap(norm(list(edge_values)))
+
+            nx.draw(uG, pos, node_size=0, node_color='black', ax=ax)
+            nx.draw_networkx_edges(uG, pos, edge_color=edge_colors, width=2, ax=ax)
+
+            # Add colorbar for flow
+            sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+            sm.set_array(list(edge_values))
+            cbar = fig.colorbar(sm, ax=ax)
+            cbar.set_label('Flow [L/s]', fontsize=14)
+            return  # Exit after drawing edges to avoid additional labels
+
+        # Color scaling
+        min_val, max_val = min(node_vals_all), max(node_vals_all)
+
+        # Plot nodes
+        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=20, node_color=junction_vals,
+                cmap=cmap, vmin=min_val, vmax=max_val, ax=ax)
+        nx.draw_networkx_nodes(
+            uG, pos, 
+            nodelist=net_info['reservoir_names'], 
+            node_size=100, 
+            node_shape='s',  # Square shape
+            node_color=reservoir_vals, 
+            cmap=cmap, 
+            vmin=min_val, 
+            vmax=max_val, 
+            ax=ax
+        )
+
+        if pcv_nodes is not None:
+            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black', ax=ax)
+
+        # Add colorbar
+        sm = plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(min_val, max_val))
         sm.set_array(node_vals_all)
-        colorbar = plt.colorbar(sm)
-        colorbar.set_label('Hydraulic head [m]', fontsize=14)
-
-    elif plot_type == 'pressure head':
-
-        uG = nx.from_pandas_edgelist(link_df, source='node_out', target='node_in')
-        pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
-        
-        # create dictionary from dataframe to match node IDs
-        vals_df = vals.set_index('node_ID')[f'h_{t}']
-        h0_df = h0_df.set_index('node_ID')[f'h0_{t}']
-
-        junction_vals = [vals_df[node] - node_df.loc[node_df['node_ID'] == node, 'elev'].to_numpy()[0] for node in net_info['junction_names']]
-        reservoir_vals = [0 for node in net_info['reservoir_names']]
-        node_vals_all = junction_vals + reservoir_vals
-
-        # color scaling
-        min_val = min(node_vals_all)
-        max_val = max(node_vals_all)
-
-        # plot pressure heads
-        cmap = cm.get_cmap('RdYlBu')
-        nx.draw(uG, pos, nodelist=net_info['junction_names'], node_size=20, node_shape='o', node_color=junction_vals, cmap=cmap, vmin=min_val, vmax=max_val)
-        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=100, node_shape='s', node_color=reservoir_vals, cmap=cmap, vmin=min_val, vmax=max_val) 
-        if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
-
-        # create a color bar
-        sm = plt.cm.ScalarMappable(cmap=cmap)
-        sm.set_array(node_vals_all)
-        colorbar = plt.colorbar(sm)
-        colorbar.set_label('Pressure head [m]', fontsize=14)
-
-
-    elif plot_type == 'flow':
-
-        edge_df = link_df[['link_ID', 'node_out', 'node_in']]
-        edge_df.set_index('link_ID', inplace=True)
-        vals_df = vals.set_index('link_ID')[f'q_{t}']
-        vals_df = abs(vals_df) * 1000
-        edge_df = edge_df.join(vals_df)
-
-        uG = nx.from_pandas_edgelist(edge_df, source='node_out', target='node_in', edge_attr=f'q_{t}')
-        pos = {row['node_ID']: (row['xcoord'], row['ycoord']) for _, row in node_df.iterrows()}
-
-        # Define colormap
-        cmap = cm.get_cmap('RdYlBu')
-
-        edge_values = nx.get_edge_attributes(uG, f'q_{t}')
-        edge_values = list(edge_values.values())
-
-        # color scaling
-        norm = plt.Normalize(min(edge_values), max(edge_values))
-        edge_colors = cmap(norm(edge_values))
-
-
-        nx.draw(uG, pos, node_size=0, node_shape='o', node_color='black')
-        nx.draw_networkx_nodes(uG, pos, nodelist=net_info['reservoir_names'], node_size=100, node_shape='s', node_color='black') 
-        nx.draw_networkx_edges(uG, pos, edge_color=edge_colors, width=2) 
-        if pcv_nodes is not None:
-            nx.draw_networkx_nodes(uG, pos, nodelist=pcv_nodes, node_size=100, node_shape='d', node_color='black') # draw pcv nodes (downstream node)
-
-        # create a color bar
-        sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-        sm.set_array(edge_values)
-        colorbar = plt.colorbar(sm)
-        colorbar.set_label('Flow [L/s]', fontsize=14)       
-
-    
-    ## reservoir labels
+        cbar = fig.colorbar(sm, ax=ax)
+        cbar.set_label('Hydraulic head [m]' if plot_type == 'hydraulic head' else 'Pressure head [m]', fontsize=14)
+ 
+    # Add labels (common for all plots)
     reservoir_labels = {node: 'Reservoir' for node in net_info['reservoir_names']}
-    labels_1 = nx.draw_networkx_labels(uG, pos, reservoir_labels, font_size=12, verticalalignment='bottom')
-    for _, label in labels_1.items():
-        label.set_y(label.get_position()[1] + 50)
-
-    ## PCV labels
+    _reservoir_labels = nx.draw_networkx_labels(uG, pos, reservoir_labels, font_size=12, ax=ax)
+    for _, label in _reservoir_labels.items():
+        label.set_y(label.get_position()[1] + 80)
+    
     if pcv_nodes is not None:
         pcv_labels = {node: 'PCV' for node in pcv_nodes}
-        labels_2 = nx.draw_networkx_labels(uG, pos, pcv_labels, font_size=12, verticalalignment='bottom')
-        for _, label in labels_2.items():
-            label.set_y(label.get_position()[1] + 50)
+        _pcv_labels = nx.draw_networkx_labels(uG, pos, pcv_labels, font_size=12, ax=ax)
+        for _, label in _pcv_labels.items():
+            label.set_y(label.get_position()[1] + 80)
 
-
-    ## sensor labels
     if sensor_nodes is not None:
-        sensor_labels = {node: str(idx+1) for (idx, node) in enumerate(sensor_names)}
-        labels_sen = nx.draw_networkx_labels(uG, pos, sensor_labels, font_size=12, verticalalignment='bottom')
-        for _, label in labels_sen.items():
-            label.set_y(label.get_position()[1] + 50)
+        sensor_labels = {node: str(idx + 1) for idx, node in enumerate(sensor_names)}
+        _sensor_labels = nx.draw_networkx_labels(uG, pos, sensor_labels, font_size=12, ax=ax)
+        for _, label in _sensor_labels.items():
+            label.set_y(label.get_position()[1] + 120)
+
+
+
 
 
 
